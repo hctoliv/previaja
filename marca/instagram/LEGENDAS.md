@@ -22,21 +22,22 @@ Fale com a equipe pelo link da bio. 🧡
 
 ---
 
-## Carrossel 2 · Sites que já estão no ar (8 slides)
+## Carrossel 2 · O que vem no seu site (8 slides)
 
-**Arquivos:** `2-sites-no-ar-01.png` a `2-sites-no-ar-08.png`
+**Arquivos:** `2-o-que-vem-01.png` a `2-o-que-vem-08.png`
 
 **Legenda:**
 
-5 negócios, 5 sites diferentes. 👇
+O que vem no site que a Prévia Já faz para a sua empresa? 👇
 
-Rodrighero Odontologia: agendamento pelo WhatsApp e tratamentos explicados.
-Dr. Henrique Podgurski: apresentação do especialista e botão de avaliação.
-Larisse Imóveis: simulador de financiamento que leva direto pro WhatsApp.
-Oficina de Estampas: orçamento em formato de ordem de serviço.
-Ricardo Tattoo: portfólio e postagens do Instagram atualizadas no site.
+Botão direto pro WhatsApp, com a mensagem pronta.
+Estrutura para aparecer no Google para quem busca no seu bairro.
+Perfeito no celular, onde quase todo mundo abre.
+Suas fotos e a sua nota do Google em destaque.
+Horário, mapa e como chegar.
+Endereço .com.br no nome da sua empresa.
 
-Cada site com a cara do negócio, nada de modelo genérico. Quer o seu? Link da bio.
+Tudo isso no ar em 48 horas, a partir de R$ 497. Fale com a equipe pelo link da bio.
 
 #criacaodesites #sitesprofissionais #pequenasempresas #empreendedorismo #zonaleste #saopaulo
 
