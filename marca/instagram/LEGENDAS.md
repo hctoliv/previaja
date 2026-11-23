@@ -22,22 +22,21 @@ Fale com a equipe pelo link da bio. 🧡
 
 ---
 
-## Carrossel 2 · O que vem no seu site (8 slides)
+## Carrossel 2 · Por que a Prévia Já? (8 slides)
 
-**Arquivos:** `2-o-que-vem-01.png` a `2-o-que-vem-08.png`
+**Arquivos:** `2-por-que-01.png` a `2-por-que-08.png`
 
 **Legenda:**
 
-O que vem no site que a Prévia Já faz para a sua empresa? 👇
+Por que a Prévia Já? 5 motivos 👇
 
-Botão direto pro WhatsApp, com a mensagem pronta.
-Estrutura para aparecer no Google para quem busca no seu bairro.
-Perfeito no celular, onde quase todo mundo abre.
-Suas fotos e a sua nota do Google em destaque.
-Horário, mapa e como chegar.
-Endereço .com.br no nome da sua empresa.
+1. No ar em 48 horas, enquanto uma agência leva semanas.
+2. Preço fechado: a partir de R$ 497, sem letra miúda.
+3. Tudo pelo WhatsApp, direto com quem faz o seu site.
+4. Feito para o seu negócio, com as suas fotos e a sua cara.
+5. O site é seu: endereço .com.br no nome da sua empresa.
 
-Tudo isso no ar em 48 horas, a partir de R$ 497. Fale com a equipe pelo link da bio.
+Sem complicação e sem precisar entender de site. Fale com a equipe pelo link da bio.
 
 #criacaodesites #sitesprofissionais #pequenasempresas #empreendedorismo #zonaleste #saopaulo
 
