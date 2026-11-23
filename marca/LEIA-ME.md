@@ -17,3 +17,12 @@
 
   Cada pasta tem os 8 slides (`slide-01.png` a `slide-08.png`), a `legenda.txt` para colar e o `texto-alternativo.txt`.
   Depois de postar os três, fixe todos no perfil.
+
+## 4-anuncios-meta
+Criativos para anunciar no Meta Ads (Instagram e Facebook), em 3 conceitos e 3 tamanhos:
+- `feed-4x5/`: 1080 × 1350, para o feed.
+- `quadrado-1x1/`: 1080 × 1080, para feed e coluna da direita.
+- `stories-9x16/`: 1080 × 1920, para Stories e Reels.
+
+Conceitos: `a-google` (Ele te encontra?), `b-preco` (R$ 497) e `c-48h` (No ar em 48 horas).
+Os textos de cada anúncio e a sugestão de campanha estão em `TEXTOS-DOS-ANUNCIOS.txt`.

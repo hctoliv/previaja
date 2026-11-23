@@ -1,0 +1,79 @@
+ANÚNCIOS META ADS · PRÉVIA JÁ
+=============================
+
+Cada anúncio tem 3 tamanhos. No Gerenciador de Anúncios, suba os 3 no mesmo anúncio
+(opção "Selecionar posicionamentos" ou "Personalizar mídia por posicionamento"):
+- feed-4x5      → Feed do Instagram e do Facebook
+- quadrado-1x1  → Feed e coluna da direita do Facebook, Marketplace
+- stories-9x16  → Stories e Reels (o topo e a parte de baixo ficam livres de propósito,
+                  porque a interface do Instagram cobre essas áreas)
+
+
+ANÚNCIO A · "Ele te encontra?"   (imagens: a-google.png)
+------------------------------------------------------------
+Público ideal: dono de negócio que ainda não tem site.
+
+Texto principal (versão 1):
+Seu cliente te procura no Google. Ele te encontra?
+Quem não tem site perde cliente para o concorrente da mesma rua. A Prévia Já coloca o site da sua empresa no ar em 48 horas, com botão direto pro seu WhatsApp. A partir de R$ 497.
+
+Texto principal (versão 2):
+Quase todo cliente pesquisa antes de ligar. Se a sua empresa não aparece, ele liga pra outra.
+Site profissional no ar em 48 horas, a partir de R$ 497. Fale com a equipe pelo WhatsApp.
+
+Título: Seu site no ar em 48 horas
+Descrição: A partir de R$ 497
+Botão: Enviar mensagem (WhatsApp)
+
+
+ANÚNCIO B · "R$ 497"   (imagens: b-preco.png)
+------------------------------------------------------------
+Público ideal: quem já pensou em fazer site, mas acha caro.
+
+Texto principal (versão 1):
+Site profissional não precisa custar R$ 5 mil.
+Na Prévia Já o preço é fechado: R$ 497 ou 3x de R$ 175, com botão de WhatsApp, mapa, horário e tudo pronto para o Google. No ar em 48 horas.
+
+Texto principal (versão 2):
+Quanto custa um site para a sua empresa? R$ 497, ou 3x de R$ 175 no cartão.
+Sem letra miúda, sem mensalidade obrigatória e com o domínio no nome da sua empresa.
+
+Título: Site profissional por R$ 497
+Descrição: No ar em 48 horas
+Botão: Enviar mensagem (WhatsApp)
+
+
+ANÚNCIO C · "48 horas"   (imagens: c-48h.png)
+------------------------------------------------------------
+Público ideal: quem não tem tempo nem paciência para agência.
+
+Texto principal (versão 1):
+Você manda o Instagram da sua empresa. A gente cuida do resto.
+Em 48 horas o seu site está no ar, com as suas fotos, os seus serviços e um botão direto pro WhatsApp. Tudo pelo WhatsApp, a partir de R$ 497.
+
+Texto principal (versão 2):
+Sem reunião, sem e-mail, sem complicação.
+Você fala com a equipe pelo WhatsApp e em 48 horas o site da sua empresa está no ar. A partir de R$ 497.
+
+Título: Seu site pronto em 48 horas
+Descrição: Tudo pelo WhatsApp
+Botão: Enviar mensagem (WhatsApp)
+
+
+SUGESTÃO DE CONFIGURAÇÃO DA CAMPANHA
+------------------------------------------------------------
+Objetivo: Engajamento → Mensagens → WhatsApp (o botão abre a conversa com a equipe).
+Mensagem de boas-vindas: "Olá! Quero saber mais sobre o site para a minha empresa."
+
+Público para começar:
+- Local: São Paulo, raio de 10 a 15 km da Mooca (ou a cidade toda, se o orçamento permitir).
+- Idade: 25 a 60 anos.
+- Interesses: pequenas e médias empresas, empreendedorismo, administradores de página do
+  Facebook, proprietário de pequena empresa (comportamento).
+
+Orçamento de teste: R$ 30 a R$ 50 por dia, por 7 dias, com os 3 anúncios no mesmo conjunto.
+Depois de 7 dias: pause o anúncio com o custo por conversa mais alto e coloque mais verba
+no que trouxer mais conversas que viram venda.
+
+O que medir: custo por conversa iniciada e quantas conversas viram venda. Se uma venda de
+R$ 497 custar menos de uns R$ 150 em anúncio, vale aumentar a verba aos poucos.
