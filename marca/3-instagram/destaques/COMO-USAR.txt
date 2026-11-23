@@ -1,0 +1,15 @@
+DESTAQUES DO INSTAGRAM · PRÉVIA JÁ
+==================================
+
+Ordem no perfil: Como funciona · Preços · Contato
+
+1) Poste os stories de cada pasta, em ordem (story-01, 02, 03...).
+2) No perfil, toque em "+ Novo" nos destaques, escolha os stories da pasta e dê o nome:
+   - 1-como-funciona  →  nome: Como funciona   capa: capas/capa-como-funciona.png
+   - 2-precos         →  nome: Preços          capa: capas/capa-precos.png
+   - 3-contato        →  nome: Contato         capa: capas/capa-contato.png
+3) Para trocar a capa: Editar destaque → Editar capa → ícone de galeria → escolha a capa.
+   O ícone já está centralizado, é só confirmar sem mexer no zoom.
+
+Dica: nos stories de contato e no último de "Como funciona", coloque o sticker de LINK
+com wa.me/5511969073587 em cima do botão verde, para o botão funcionar de verdade.
