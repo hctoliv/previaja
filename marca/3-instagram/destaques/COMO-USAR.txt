@@ -1,13 +1,15 @@
 DESTAQUES DO INSTAGRAM · PRÉVIA JÁ
+
+Pastas: 1-logo (capas redondas) · 2-destaques (stories) · 3-titulo (nomes dos destaques)
 ==================================
 
 Ordem no perfil: Como funciona · Preços · Contato
 
 1) Poste os stories de cada pasta, em ordem (story-01, 02, 03...).
 2) No perfil, toque em "+ Novo" nos destaques, escolha os stories da pasta e dê o nome:
-   - 1-como-funciona  →  nome: Como funciona   capa: capas/capa-como-funciona.png
-   - 2-precos         →  nome: Preços          capa: capas/capa-precos.png
-   - 3-contato        →  nome: Contato         capa: capas/capa-contato.png
+   - 2-destaques/1-como-funciona  →  nome: Como funciona   capa: 1-logo/capa-como-funciona.png
+   - 2-destaques/2-precos         →  nome: Preços          capa: 1-logo/capa-precos.png
+   - 2-destaques/3-contato        →  nome: Contato         capa: 1-logo/capa-contato.png
 3) Para trocar a capa: Editar destaque → Editar capa → ícone de galeria → escolha a capa.
    O ícone já está centralizado, é só confirmar sem mexer no zoom.
 

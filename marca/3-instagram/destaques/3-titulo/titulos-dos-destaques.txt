@@ -1,0 +1,5 @@
+TÍTULOS DOS DESTAQUES (digite exatamente assim no Instagram)
+
+1. Como funciona   →  logo: 1-logo/capa-como-funciona.png   stories: 2-destaques/1-como-funciona
+2. Preços          →  logo: 1-logo/capa-precos.png          stories: 2-destaques/2-precos
+3. Contato         →  logo: 1-logo/capa-contato.png         stories: 2-destaques/3-contato
