@@ -1,5 +1,7 @@
 @font-face{font-family:"Playfair";src:url(fonts/playfair.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
 @font-face{font-family:"Playfair";src:url(fonts/playfair-italic.woff2) format("woff2");font-weight:400 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Archivo";src:url(fonts/archivo.woff2) format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"DM Mono";src:url(fonts/dmmono.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Manrope";src:url(fonts/manrope.woff2) format("woff2");font-weight:200 800;font-display:swap}
 
 :root{
@@ -364,3 +366,36 @@ em.gold-text{font-style:italic}
   .reveal,.fade-up{opacity:1;transform:none}
   .hero__title .word{transform:none}
 }
+
+/* tela de senha · identidade Conecta Aí */
+.gate{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:#050b1f;color:#eef3ff;font-family:"Archivo",system-ui,sans-serif;overflow:hidden;transition:opacity .9s var(--ease),visibility .9s}
+.gate[hidden]{display:none}
+.gate.is-out{opacity:0;visibility:hidden}
+.gate__glow{position:absolute;inset:0;background:radial-gradient(60% 50% at 80% 20%,rgba(5,102,245,.35),transparent 70%),radial-gradient(50% 50% at 10% 90%,rgba(0,200,255,.18),transparent 70%);animation:gateGlow 8s ease-in-out infinite alternate}
+@keyframes gateGlow{to{transform:scale(1.15) translate(-2%,2%)}}
+.gate::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(150,180,255,.25) 1px,transparent 1.5px);background-size:46px 46px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.gate__card{position:relative;width:min(520px,100%);padding:clamp(28px,5vw,44px);border-radius:28px;background:rgba(8,18,51,.72);border:1px solid rgba(150,180,255,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 40px 100px -40px rgba(3,70,232,.6);animation:gateIn .9s var(--ease) both}
+@keyframes gateIn{from{opacity:0;transform:translateY(30px) scale(.97)}}
+.gate.is-ok .gate__card{transform:scale(.96);opacity:.0;transition:all .8s var(--ease)}
+.gate__logo{height:30px;width:auto}
+.gate__browser{display:flex;align-items:center;gap:6px;margin:26px 0 22px;padding:9px 12px;border-radius:12px;background:rgba(0,5,33,.6);border:1px solid rgba(150,180,255,.12)}
+.gate__browser i{width:9px;height:9px;border-radius:50%;background:#26355f}
+.gate__browser i:first-child{background:#0a9bff}
+.gate__browser span{margin-left:10px;font:13px "DM Mono",ui-monospace,monospace;color:#93a3c8}
+.gate__kicker{display:flex;align-items:center;gap:10px;font:12px "DM Mono",ui-monospace,monospace;letter-spacing:.22em;text-transform:uppercase;color:#93a3c8}
+.gate__kicker span{width:8px;height:8px;border-radius:50%;background:#00c8ff;box-shadow:0 0 0 0 rgba(0,200,255,.6);animation:gatePulse 1.8s infinite}
+@keyframes gatePulse{to{box-shadow:0 0 0 12px rgba(0,200,255,0)}}
+.gate__title{font:800 clamp(30px,4.6vw,42px)/1.05 "Archivo",system-ui,sans-serif;letter-spacing:-.03em;margin:12px 0 14px}
+.gate__title span{display:block;background:linear-gradient(100deg,#00c8ff 0%,#0a9bff 45%,#0346e8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gate__text{color:#b9c6e6;font-size:16px;line-height:1.6}
+.gate__form{display:flex;gap:10px;margin-top:24px}
+.gate__form input{flex:1;min-width:0;height:54px;padding:0 18px;border-radius:999px;border:1px solid rgba(150,180,255,.25);background:rgba(0,5,33,.55);color:#eef3ff;font:16px "Archivo",system-ui,sans-serif}
+.gate__form input:focus{outline:none;border-color:#0a9bff;box-shadow:0 0 0 3px rgba(10,155,255,.25)}
+.gate__form button{height:54px;padding:0 22px;border-radius:999px;background:linear-gradient(100deg,#00c8ff 0%,#0a9bff 45%,#0346e8 100%);color:#fff;font:700 15px "Archivo",system-ui,sans-serif;white-space:nowrap;box-shadow:0 12px 30px -12px rgba(10,155,255,.8);transition:transform .25s var(--ease)}
+.gate__form button:hover{transform:translateY(-2px)}
+.gate__form.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.gate__error{margin-top:12px;color:#ff8f8f;font-size:14px}
+.gate__foot{margin-top:26px;padding-top:18px;border-top:1px solid rgba(150,180,255,.12);font:12px "DM Mono",ui-monospace,monospace;color:#7b8bb3;letter-spacing:.04em}
+body.is-gated .loader{visibility:hidden}
+@media (max-width:480px){.gate__form{flex-direction:column}.gate__form input{flex:none}.gate__form button{width:100%}}

@@ -9,12 +9,32 @@
 <meta name="description" content="Casas, sobrados e apartamentos para comprar ou alugar em Santo André, São Bernardo do Campo e São Caetano do Sul. Agende sua visita com a ABN Imóveis.">
 <meta name="theme-color" content="#0b0a08">
 <link rel="icon" href="img/logo-abn-192.webp" type="image/webp">
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/playfair.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/hero-sa-1920.webp" as="image">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="is-loading">
+
+<!-- PRÉVIA · CONECTA AÍ -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle" hidden>
+  <div class="gate__glow" aria-hidden="true"></div>
+  <div class="gate__card">
+    <img class="gate__logo" src="img/conecta/letreiro-branco.webp" alt="Conecta Aí" width="236" height="30">
+    <div class="gate__browser" aria-hidden="true"><i></i><i></i><i></i><span>abnimoveis.com.br</span></div>
+    <p class="gate__kicker"><span></span>Prévia exclusiva</p>
+    <h1 class="gate__title" id="gateTitle">Olá, ABN Imóveis. <span>Seu site está pronto.</span></h1>
+    <p class="gate__text">Desenvolvemos este projeto para quem procura casa ou apartamento no ABC. Digite a senha que enviamos para abrir a prévia.</p>
+    <form class="gate__form" id="gateForm" novalidate>
+      <label class="sr" for="gatePass">Senha</label>
+      <input id="gatePass" type="password" autocomplete="off" placeholder="Digite a senha" required>
+      <button type="submit">Abrir prévia <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="gate__error" id="gateError" role="alert" hidden>Senha incorreta. Confira a mensagem e tente de novo.</p>
+    <p class="gate__foot">Conecta Aí · sites, marketing digital e resultados</p>
+  </div>
+</div>
 
 <!-- ABERTURA -->
 <div class="loader" id="loader" aria-hidden="true">
@@ -269,7 +289,7 @@
   <div class="footer__legal">
     <span>© 2026 ABN Imóveis</span>
     <a href="creditos.html">Créditos das fotos</a>
-    <span>Prévia desenvolvida por <a href="https://hctoliv.github.io/previaja/" target="_blank" rel="noopener">Prévia Já</a></span>
+    <span>Site desenvolvido por <a href="https://hctoliv.github.io/conecta-ai/" target="_blank" rel="noopener">Conecta Aí</a></span>
   </div>
 </footer>
 
@@ -295,6 +315,7 @@
   </div>
 </div>
 
+<script src="gate.js" defer></script>
 <script src="main.js" defer></script>
 </body>
 </html>

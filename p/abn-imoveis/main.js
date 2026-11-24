@@ -27,7 +27,7 @@
   /* abertura */
   const loader = $('#loader'), bar = $('#loaderBar');
   let pct = 0;
-  const tick = setInterval(() => { pct = Math.min(100, pct + 9 + Math.random() * 14); bar.style.width = pct + '%'; if (pct >= 100) clearInterval(tick); }, 110);
+  let tick = 0;
   const ready = () => {
     clearInterval(tick); bar.style.width = '100%';
     setTimeout(() => {
@@ -35,9 +35,12 @@
       setTimeout(() => loader.classList.add('is-gone'), 1100);
     }, reduce ? 0 : 350);
   };
-  const minTime = new Promise((r) => setTimeout(r, reduce ? 0 : 1500));
   const loaded = new Promise((r) => (document.readyState === 'complete' ? r() : addEventListener('load', r)));
-  Promise.race([Promise.all([minTime, loaded]), new Promise((r) => setTimeout(r, 4000))]).then(ready);
+  (window.ABN_GATE || Promise.resolve()).then(() => {
+    tick = setInterval(() => { pct = Math.min(100, pct + 9 + Math.random() * 14); bar.style.width = pct + '%'; if (pct >= 100) clearInterval(tick); }, 110);
+    const minTime = new Promise((r) => setTimeout(r, reduce ? 0 : 1500));
+    Promise.race([Promise.all([minTime, loaded]), new Promise((r) => setTimeout(r, 4000))]).then(ready);
+  });
   $$('.hero__lead, .search, .hero .eyebrow').forEach((el, i) => { el.classList.add('fade-up'); el.style.animationDelay = (0.45 + i * 0.12) + 's'; });
 
   /* nav */
