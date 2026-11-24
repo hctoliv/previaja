@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src https://open.spotify.com; base-uri 'self'; form-action 'none'">
 <title>Acesso Travis Scott Brasil</title>
 <meta name="description" content="Acesso Travis Scott Brasil: notícias, shows, lançamentos e a era GTA VI de Travis Scott, em português e em primeira mão. Fan page independente com 97,7 mil seguidores.">
 <meta name="theme-color" content="#D64741">
@@ -29,11 +29,11 @@
   </a>
   <nav class="nav__links" id="menu" aria-label="Seções">
     <a href="#noticias">Notícias</a>
+    <a href="#lolla">Lolla 2027</a>
     <a href="#vice-city">Era GTA VI</a>
-    <a href="#discografia">Discografia</a>
-    <a href="#galeria">Galeria</a>
+    <a href="#albuns">Álbuns</a>
+    <a href="#playlist">Playlist</a>
     <a href="#quiz">Quiz</a>
-    <a href="#comunidade">Comunidade</a>
   </nav>
   <a class="btn btn--red nav__cta" href="https://www.instagram.com/acessotravis/" target="_blank" rel="noopener">Seguir</a>
   <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
@@ -74,6 +74,7 @@
 <div class="ticker" aria-label="Manchetes">
   <div class="ticker__track">
     <p>
+      <span>Travis confirmado no Lollapalooza Brasil 2027</span>
       <span>Travis surpreende no show da Tyla em Chicago</span>
       <span>GTA VI: The Album deluxe chega com 23 faixas</span>
       <span>“Burn This Sh*t Down” viraliza nas missões do jogo</span>
@@ -81,6 +82,7 @@
       <span>La Flame na Booby Trap depois do festival</span>
     </p>
     <p aria-hidden="true">
+      <span>Travis confirmado no Lollapalooza Brasil 2027</span>
       <span>Travis surpreende no show da Tyla em Chicago</span>
       <span>GTA VI: The Album deluxe chega com 23 faixas</span>
       <span>“Burn This Sh*t Down” viraliza nas missões do jogo</span>
@@ -93,7 +95,7 @@
 <!-- NOTÍCIAS -->
 <section class="sec" id="noticias">
   <header class="head reveal">
-    <p class="kicker">01 / Últimas do Acesso</p>
+    <p class="kicker">Últimas do Acesso</p>
     <h2 class="title">O que rolou <span>essa semana</span></h2>
   </header>
 
@@ -182,11 +184,29 @@
   <p class="news__empty" id="newsEmpty" hidden>Nada nessa categoria por enquanto. Volta amanhã 👀</p>
 </section>
 
+<!-- LOLLA -->
+<section class="lolla" id="lolla">
+  <div class="lolla__inner reveal">
+    <p class="lolla__eyebrow"><span class="dot"></span> Confirmado no site oficial</p>
+    <h2 class="lolla__title"><span>Travis no</span> Lollapalooza Brasil</h2>
+    <div class="lolla__row">
+      <p class="lolla__date">19—21<small>março 2027</small></p>
+      <p class="lolla__place">Autódromo de Interlagos<small>São Paulo</small></p>
+      <p class="lolla__count"><b id="lollaDays">–</b><small>dias para o festival</small></p>
+    </div>
+    <p class="lolla__txt">A turnê passa pela América do Sul em março: Lollapalooza Argentina e Chile (12 a 14), Brasil e Festival Estéreo Picnic, em Bogotá (19 a 21). O dia exato do show em São Paulo ainda não saiu, e o Acesso avisa assim que sair.</p>
+    <div class="ctas">
+      <a class="btn btn--paper btn--big" href="https://www.travisscott.com/tour/" target="_blank" rel="noopener">Datas e ingressos</a>
+      <a class="btn btn--line-light btn--big" href="https://www.instagram.com/acessotravis/" target="_blank" rel="noopener">Ativar avisos no @acessotravis</a>
+    </div>
+  </div>
+</section>
+
 <!-- VICE CITY -->
 <section class="vc" id="vice-city">
   <div class="vc__inner">
     <header class="head head--center reveal">
-      <p class="kicker kicker--light">02 / A era GTA VI</p>
+      <p class="kicker kicker--light">A era GTA VI</p>
       <h2 class="title title--light">Bem-vindo a <span>Vice City</span></h2>
       <p class="lead">Travis Scott virou trilha, palco e personagem do jogo mais esperado da década. O Acesso cobriu cada capítulo.</p>
     </header>
@@ -228,31 +248,149 @@
 </section>
 
 <!-- DISCOGRAFIA -->
-<section class="sec" id="discografia">
-  <header class="head reveal">
-    <p class="kicker">03 / Linha do tempo</p>
-    <h2 class="title">Do Owl Pharaoh <span>a Vice City</span></h2>
-    <p class="sub">Arraste para atravessar mais de uma década de La Flame.</p>
+<section class="disco" id="albuns">
+  <header class="disco__head reveal">
+    <p class="disco__eyebrow">Explore</p>
+    <h2 class="disco__title">Discografia</h2>
+    <p class="disco__sub">Do Days Before Rodeo à trilha do GTA VI. Tudo começou antes, com a mixtape Owl Pharaoh, de 2013.</p>
   </header>
-  <div class="rail" id="rail" tabindex="0" aria-label="Linha do tempo da discografia, role para os lados">
-    <article class="rec rec--ink"><div class="rec__cover"><span>2013</span></div><h3>Owl Pharaoh</h3><p>Mixtape</p></article>
-    <article class="rec rec--paper"><div class="rec__cover"><span>2014</span></div><h3>Days Before Rodeo</h3><p>Mixtape</p></article>
-    <article class="rec rec--red"><div class="rec__cover"><span>2015</span></div><h3>Rodeo</h3><p>Álbum de estreia</p></article>
-    <article class="rec rec--ink"><div class="rec__cover"><span>2016</span></div><h3>Birds in the Trap Sing McKnight</h3><p>Álbum</p></article>
-    <article class="rec rec--paper"><div class="rec__cover"><span>2017</span></div><h3>Huncho Jack, Jack Huncho</h3><p>Com Quavo</p></article>
-    <article class="rec rec--red"><div class="rec__cover"><span>2018</span></div><h3>Astroworld</h3><p>Álbum</p></article>
-    <article class="rec rec--ink"><div class="rec__cover"><span>2019</span></div><h3>JackBoys</h3><p>Cactus Jack</p></article>
-    <article class="rec rec--paper"><div class="rec__cover"><span>2023</span></div><h3>Utopia</h3><p>Álbum</p></article>
-    <article class="rec rec--ink"><div class="rec__cover"><span>2025</span></div><h3>JACKBOYS 2</h3><p>Cactus Jack</p></article>
-    <article class="rec rec--red rec--now"><div class="rec__cover"><span>2026</span></div><h3>GTA VI: The Album</h3><p>Deluxe · 23 faixas</p></article>
+  <div class="disco__stage">
+    <button class="pill pill--icon disco__nav disco__nav--prev" id="albPrev" aria-label="Álbum anterior">←</button>
+    <div class="disco__track" id="albTrack" tabindex="0" aria-label="Álbuns, use as setas para navegar">
+      <button class="alb" data-i="0" aria-label="Days Before Rodeo (2014)"><img src="img/albuns/dbr.webp" alt="Capa de Days Before Rodeo" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="1" aria-label="Rodeo (2015)"><img src="img/albuns/rodeo.webp" alt="Capa de Rodeo" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="2" aria-label="Birds in the Trap Sing McKnight (2016)"><img src="img/albuns/birds.webp" alt="Capa de Birds in the Trap Sing McKnight" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="3" aria-label="Huncho Jack, Jack Huncho (2017)"><img src="img/albuns/huncho.webp" alt="Capa de Huncho Jack, Jack Huncho" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="4" aria-label="Astroworld (2018)"><img src="img/albuns/astro.webp" alt="Capa de Astroworld" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="5" aria-label="JACKBOYS (2019)"><img src="img/albuns/jb.webp" alt="Capa de JACKBOYS" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="6" aria-label="UTOPIA (2023)"><img src="img/albuns/utopia.webp" alt="Capa de UTOPIA" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="7" aria-label="JACKBOYS 2 (2025)"><img src="img/albuns/jb2.webp" alt="Capa de JACKBOYS 2" width="640" height="640" loading="lazy"></button>
+      <button class="alb" data-i="8" aria-label="GTA VI: The Album (2026)"><img src="img/albuns/gta.webp" alt="Capa de GTA VI: The Album" width="640" height="640" loading="lazy"></button>
+    </div>
+    <button class="pill pill--icon disco__nav disco__nav--next" id="albNext" aria-label="Próximo álbum">→</button>
   </div>
-  <div class="rail__bar" aria-hidden="true"><span id="railBar"></span></div>
+  <div class="disco__info" aria-live="polite">
+      <article class="albinfo" data-i="0" data-sp="54Y471E7GNBSOXjZtqONId" hidden>
+        <p class="albinfo__meta">Mixtape · 2014 · 12 faixas</p>
+        <h3 class="albinfo__title">Days Before Rodeo</h3>
+        <p class="albinfo__txt">A mixtape que preparou o terreno para o Rodeo: clima sombrio, produção pesada e o som que virou marca registrada do La Flame. Chegou às plataformas de streaming em 2024, nos 10 anos do lançamento.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>Mamacita</li><li>Don’t Play</li><li>Drugs You Should Try It</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/54Y471E7GNBSOXjZtqONId" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="1" data-sp="4PWBTB6NYSKQwfo79I3prg" hidden>
+        <p class="albinfo__meta">Álbum de estreia · 2015 · 16 faixas</p>
+        <h3 class="albinfo__title">Rodeo</h3>
+        <p class="albinfo__txt">O primeiro álbum de estúdio. Tem “Antidote”, o primeiro grande hit, e participações de Kanye West, The Weeknd, Justin Bieber, Future e Young Thug.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>Antidote</li><li>3500</li><li>90210</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/4PWBTB6NYSKQwfo79I3prg" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="2" data-sp="42WVQWuf1teDysXiOupIZt" hidden>
+        <p class="albinfo__meta">Álbum · 2016 · 14 faixas</p>
+        <h3 class="albinfo__title">Birds in the Trap Sing McKnight</h3>
+        <p class="albinfo__txt">O primeiro álbum do Travis a estrear em 1º lugar na Billboard 200. Kendrick Lamar, Kid Cudi e Young Thug estão entre os convidados.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>goosebumps</li><li>pick up the phone</li><li>through the late night</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/42WVQWuf1teDysXiOupIZt" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="3" data-sp="6FED8aeieEnUWwQqAO9zT1" hidden>
+        <p class="albinfo__meta">Com Quavo · 2017 · 13 faixas</p>
+        <h3 class="albinfo__title">Huncho Jack, Jack Huncho</h3>
+        <p class="albinfo__txt">Projeto em dupla com o Quavo, do Migos, assinado como Huncho Jack. Lançado de surpresa no fim de 2017.</p>
+        
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/6FED8aeieEnUWwQqAO9zT1" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="4" data-sp="41GuZcammIkupMPKH2OJ6I" hidden>
+        <p class="albinfo__meta">Álbum · 2018 · 17 faixas</p>
+        <h3 class="albinfo__title">Astroworld</h3>
+        <p class="albinfo__txt">Homenagem ao parque de diversões de Houston, cidade natal do Travis, que fechou em 2005. Deu a ele o primeiro 1º lugar na Billboard Hot 100, com “SICKO MODE”, e foi indicado ao Grammy de Melhor Álbum de Rap.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>SICKO MODE</li><li>STARGAZING</li><li>BUTTERFLY EFFECT</li><li>YOSEMITE</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/41GuZcammIkupMPKH2OJ6I" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="5" data-sp="1Sf8GsXG32t0jNrX11xqWx" hidden>
+        <p class="albinfo__meta">Cactus Jack · 2019 · 7 faixas</p>
+        <h3 class="albinfo__title">JACKBOYS</h3>
+        <p class="albinfo__txt">Compilação do selo Cactus Jack com Don Toliver, Sheck Wes e Luxury Tax. Curta e direta: 7 faixas e estreia em 1º lugar na Billboard 200.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>OUT WEST</li><li>GATTI</li><li>HIGHEST IN THE ROOM (Remix)</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/1Sf8GsXG32t0jNrX11xqWx" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="6" data-sp="18NOKLkZETa4sWwLMIm0UZ" hidden>
+        <p class="albinfo__meta">Álbum · 2023 · 19 faixas</p>
+        <h3 class="albinfo__title">UTOPIA</h3>
+        <p class="albinfo__txt">O quarto álbum solo, cinco anos depois do Astroworld. Estreou em 1º lugar e virou a turnê Circus Maximus, que rodou o mundo.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>FE!N</li><li>MELTDOWN</li><li>I KNOW ?</li><li>MY EYES</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/18NOKLkZETa4sWwLMIm0UZ" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="7" data-sp="32lGAqeVkdJxEj2iv2Q01B" hidden>
+        <p class="albinfo__meta">Cactus Jack · 2025 · 17 faixas</p>
+        <h3 class="albinfo__title">JACKBOYS 2</h3>
+        <p class="albinfo__txt">A volta do coletivo Cactus Jack, seis anos depois do primeiro. Tem “PBT”, a parceria com a Tyla que os dois cantaram juntos na A*Pop Tour.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>PBT</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/32lGAqeVkdJxEj2iv2Q01B" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+      <article class="albinfo" data-i="8" data-sp="5BYKG4MHfySZthe2W6r7n4">
+        <p class="albinfo__meta">Trilha do jogo · 2026 · 34 faixas</p>
+        <h3 class="albinfo__title">GTA VI: The Album</h3>
+        <p class="albinfo__txt">A trilha oficial de Grand Theft Auto VI, com vários artistas. O Travis aparece com “Burn This Sh*t Down” e “RHYNO”, ao lado de nomes como Dua Lipa e Jhayco.</p>
+        <p class="albinfo__lbl">Para começar</p><ul class="albinfo__tracks"><li>Burn This Sh*t Down</li><li>RHYNO</li></ul>
+        <div class="albinfo__btns">
+          <button class="pill pill--fill" type="button" data-play>▶ Tocar aqui</button>
+          <a class="pill" href="https://open.spotify.com/album/5BYKG4MHfySZthe2W6r7n4" target="_blank" rel="noopener">Abrir no Spotify ↗</a>
+        </div>
+      </article>
+  </div>
+  <div class="disco__player" id="albPlayer" hidden></div>
+  <img class="disco__seal" src="img/logo.svg" alt="" aria-hidden="true">
+</section>
+
+<!-- PLAYLIST -->
+<section class="sec playlist" id="playlist">
+  <div class="playlist__copy reveal">
+    <p class="kicker">Playlist</p>
+    <h2 class="title">Aperta o play <span>e sobe o volume</span></h2>
+    <p class="lead">Os maiores sons do La Flame numa playlist só, a seleção oficial do Spotify “This Is Travis Scott”. Pra ouvir enquanto lê as notícias do Acesso.</p>
+    <div class="ctas">
+      <button class="btn btn--red btn--big" type="button" id="plPlay">▶ Tocar a playlist</button>
+      <a class="btn btn--line btn--big" href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO0vGf4I" target="_blank" rel="noopener">Abrir no Spotify</a>
+    </div>
+  </div>
+  <div class="playlist__player reveal" id="plPlayer">
+    <div class="playlist__ph">
+      <img src="img/albuns/utopia.webp" alt="">
+      <img src="img/albuns/astro.webp" alt="">
+      <img src="img/albuns/rodeo.webp" alt="">
+      <img src="img/albuns/birds.webp" alt="">
+      <span>This Is Travis Scott</span>
+    </div>
+  </div>
 </section>
 
 <!-- GALERIA -->
 <section class="sec sec--tight" id="galeria">
   <header class="head reveal">
-    <p class="kicker">04 / Galeria</p>
+    <p class="kicker">Galeria</p>
     <h2 class="title">Frames <span>da semana</span></h2>
     <p class="sub">Toque para ver a foto inteira, em cores.</p>
   </header>
@@ -270,7 +408,7 @@
 <section class="sec sec--tight" id="quiz">
   <div class="quiz reveal">
     <img class="quiz__logo" src="img/logo.svg" alt="" aria-hidden="true">
-    <p class="kicker kicker--light">05 / Teste de fã</p>
+    <p class="kicker kicker--light">Teste de fã</p>
     <h2 class="title title--light">Qual era do Travis <span>é a sua?</span></h2>
     <div class="quiz__stage" id="quizStage" aria-live="polite"></div>
     <div class="quiz__progress" aria-hidden="true"><span id="quizBar"></span></div>
@@ -280,7 +418,7 @@
 <!-- COMUNIDADE -->
 <section class="sec" id="comunidade">
   <header class="head reveal">
-    <p class="kicker">06 / Por que seguir</p>
+    <p class="kicker">Por que seguir</p>
     <h2 class="title">Quase <span>100 mil</span> fãs já estão aqui</h2>
   </header>
   <div class="perks">

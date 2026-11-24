@@ -84,20 +84,56 @@
   }), { rootMargin: '-45% 0px -45% 0px' });
   steps.forEach((s) => vio.observe(s));
 
-  /* discography rail: drag + progress */
-  const rail = $('#rail'), bar = $('#railBar');
-  let down = false, sx = 0, sl = 0, moved = false;
-  rail.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = rail.scrollLeft; rail.classList.add('is-drag'); });
-  addEventListener('pointermove', (e) => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 3) moved = true; rail.scrollLeft = sl - dx; });
-  addEventListener('pointerup', () => { if (!down) return; down = false; rail.classList.remove('is-drag'); });
-  rail.addEventListener('click', (e) => { if (moved) e.preventDefault(); }, true);
-  const prog = () => { const m = rail.scrollWidth - rail.clientWidth; bar.style.width = (20 + 80 * (m > 0 ? rail.scrollLeft / m : 1)) + '%'; };
-  rail.addEventListener('scroll', prog, { passive: true }); prog();
-  rail.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-    const m = rail.scrollWidth - rail.clientWidth;
-    if ((e.deltaY > 0 && rail.scrollLeft < m - 2) || (e.deltaY < 0 && rail.scrollLeft > 2)) { e.preventDefault(); rail.scrollLeft += e.deltaY; }
-  }, { passive: false });
+  /* discografia: carrossel + player do Spotify */
+  const track = $('#albTrack'), albs = $$('.alb', track), infos = $$('.albinfo'), player = $('#albPlayer');
+  let cur = albs.length - 1, playing = false, tId = 0, lockUntil = 0;
+  const embed = (type, id, h) => {
+    const f = document.createElement('iframe');
+    f.src = `https://open.spotify.com/embed/${type}/${id}?utm_source=generator&theme=0`;
+    f.height = h; f.loading = 'lazy'; f.title = 'Player do Spotify';
+    f.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+    return f;
+  };
+  const setAlb = (i) => {
+    if (i === cur && albs[i].classList.contains('is-on')) return;
+    cur = i;
+    albs.forEach((a, k) => { a.classList.toggle('is-on', k === i); a.setAttribute('aria-current', k === i); });
+    infos.forEach((p, k) => { p.hidden = k !== i; });
+    if (playing) player.replaceChildren(embed('album', infos[i].dataset.sp, 352));
+  };
+  const goTo = (i, smooth = true) => {
+    i = Math.max(0, Math.min(albs.length - 1, i));
+    const a = albs[i];
+    lockUntil = Date.now() + 700;
+    track.scrollTo({ left: a.offsetLeft - (track.clientWidth - a.offsetWidth) / 2, behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    setAlb(i);
+  };
+  const nearest = () => {
+    const mid = track.scrollLeft + track.clientWidth / 2; let best = 0, d = Infinity;
+    albs.forEach((a, k) => { const c = a.offsetLeft + a.offsetWidth / 2; if (Math.abs(c - mid) < d) { d = Math.abs(c - mid); best = k; } });
+    return best;
+  };
+  track.addEventListener('scroll', () => { clearTimeout(tId); tId = setTimeout(() => { if (Date.now() > lockUntil) setAlb(nearest()); }, 90); }, { passive: true });
+  albs.forEach((a, k) => a.addEventListener('click', () => goTo(k)));
+  $('#albPrev').addEventListener('click', () => goTo(cur - 1));
+  $('#albNext').addEventListener('click', () => goTo(cur + 1));
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(cur - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(cur + 1); }
+  });
+  infos.forEach((p) => $('[data-play]', p).addEventListener('click', () => {
+    playing = true; player.hidden = false; player.replaceChildren(embed('album', p.dataset.sp, 352));
+    player.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+  }));
+  requestAnimationFrame(() => goTo(cur, false));
+  addEventListener('resize', () => goTo(cur, false));
+
+  /* playlist */
+  $('#plPlay').addEventListener('click', () => { $('#plPlayer').replaceChildren(embed('playlist', '37i9dQZF1DZ06evO0vGf4I', 452)); });
+
+  /* Lolla: contagem regressiva ate 19/03/2027 (horario de Brasilia) */
+  const days = Math.ceil((Date.parse('2027-03-19T00:00:00-03:00') - Date.now()) / 864e5);
+  $('#lollaDays').textContent = days > 0 ? days : 'É agora';
 
   /* lightbox */
   const lb = $('#lb'), lbImg = $('#lbImg'), lbCap = $('#lbCap'), lbClose = $('#lbClose');
