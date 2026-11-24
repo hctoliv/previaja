@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<title>ABN Imóveis | Imóveis à venda e para alugar no ABC Paulista</title>
+<meta name="description" content="Casas, sobrados e apartamentos para comprar ou alugar em Santo André, São Bernardo do Campo e São Caetano do Sul. Agende sua visita com a ABN Imóveis.">
+<meta name="theme-color" content="#0b0a08">
+<link rel="icon" href="img/logo-abn-192.webp" type="image/webp">
+<link rel="preload" href="fonts/playfair.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero-sa-1920.webp" as="image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+<!-- ABERTURA -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <img class="loader__logo" src="img/logo-abn-512.webp" alt="">
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+    <p class="loader__txt">Imóveis · Locação · Vendas</p>
+  </div>
+  <div class="loader__curtain loader__curtain--l"></div>
+  <div class="loader__curtain loader__curtain--r"></div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#topo" aria-label="ABN Imóveis, início">
+    <img src="img/logo-abn-192.webp" alt="" width="44" height="44">
+    <span>ABN <em>Imóveis</em></span>
+  </a>
+  <nav class="nav__links" id="menu" aria-label="Seções">
+    <a href="#destaques">Destaques</a>
+    <a href="#imoveis">Imóveis</a>
+    <a href="#tour">Tour</a>
+    <a href="#regiao">Região</a>
+    <a href="#como">Como funciona</a>
+  </nav>
+  <a class="btn btn--gold nav__cta" href="#visita">Agendar visita</a>
+  <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
+
+<main id="topo">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__media" id="heroMedia">
+    <picture>
+      <source media="(max-width: 700px)" srcset="img/hero-sa-780x975.webp">
+      <img src="img/hero-sa-1920.webp" srcset="img/hero-sa-1280.webp 1280w, img/hero-sa-1920.webp 1920w" sizes="100vw" alt="Torres residenciais iluminadas à noite em Santo André" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__inner">
+    <p class="eyebrow eyebrow--lines"><span></span>Imóveis · Locação · Vendas<span></span></p>
+    <h1 class="hero__title">
+      <span class="line"><span class="word">Seu</span> <span class="word">próximo</span></span>
+      <span class="line"><span class="word">endereço</span> <em class="word gold-text">no ABC</em></span>
+    </h1>
+    <p class="hero__lead">Casas, sobrados e apartamentos para comprar ou alugar em Santo André, São Bernardo do Campo e São Caetano do Sul.</p>
+
+    <form class="search" id="search" aria-label="Buscar imóveis">
+      <div class="search__tabs" role="group" aria-label="Tipo de negócio">
+        <button type="button" class="search__tab is-on" data-deal="venda" aria-pressed="true">Comprar</button>
+        <button type="button" class="search__tab" data-deal="aluguel" aria-pressed="false">Alugar</button>
+        <span class="search__pill" aria-hidden="true"></span>
+      </div>
+      <label class="search__field">
+        <span>Cidade</span>
+        <select id="sCity">
+          <option value="">Todo o ABC</option>
+          <option>Santo André</option>
+          <option>São Bernardo do Campo</option>
+          <option>São Caetano do Sul</option>
+        </select>
+      </label>
+      <label class="search__field">
+        <span>Tipo</span>
+        <select id="sType">
+          <option value="">Todos</option>
+          <option>Apartamento</option>
+          <option>Casa</option>
+          <option>Sobrado</option>
+          <option>Studio</option>
+        </select>
+      </label>
+      <button class="btn btn--gold search__go" type="submit">Buscar imóveis</button>
+    </form>
+  </div>
+  <a class="hero__scroll" href="#destaques" aria-label="Rolar para os destaques"><span></span></a>
+  <ul class="hero__facts" aria-label="Resumo">
+    <li><b>3</b> cidades do ABC</li>
+    <li><b>6</b> imóveis disponíveis</li>
+    <li><b>Seg a sáb</b> visitas</li>
+  </ul>
+</section>
+
+<!-- FAIXA -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <p><span>Santo André</span><i>◆</i><span>São Bernardo do Campo</span><i>◆</i><span>São Caetano do Sul</span><i>◆</i><span>Jardim</span><i>◆</i><span>Rudge Ramos</span><i>◆</i><span>Vila Assunção</span><i>◆</i><span>Santa Paula</span><i>◆</i><span>Baeta Neves</span><i>◆</i></p>
+    <p><span>Santo André</span><i>◆</i><span>São Bernardo do Campo</span><i>◆</i><span>São Caetano do Sul</span><i>◆</i><span>Jardim</span><i>◆</i><span>Rudge Ramos</span><i>◆</i><span>Vila Assunção</span><i>◆</i><span>Santa Paula</span><i>◆</i><span>Baeta Neves</span><i>◆</i></p>
+  </div>
+</div>
+
+<!-- DESTAQUES: galeria horizontal presa ao scroll -->
+<section class="feat" id="destaques" aria-labelledby="feat-h">
+  <div class="feat__sticky">
+    <header class="feat__head">
+      <p class="eyebrow">Em destaque</p>
+      <h2 id="feat-h" class="title">Imóveis <em class="gold-text">selecionados</em></h2>
+      <p class="feat__count"><b id="featNum">01</b> / 04</p>
+    </header>
+    <div class="feat__track" id="featTrack"></div>
+    <div class="feat__bar"><span id="featBar"></span></div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section class="sec catalog" id="imoveis" aria-labelledby="cat-h">
+  <header class="sec__head reveal">
+    <p class="eyebrow">Catálogo</p>
+    <h2 id="cat-h" class="title">Encontre o <em class="gold-text">seu lugar</em></h2>
+  </header>
+  <div class="filters reveal" role="group" aria-label="Filtrar imóveis">
+    <div class="chips">
+      <button class="chip is-on" data-f="all" aria-pressed="true">Todos</button>
+      <button class="chip" data-f="venda" aria-pressed="false">À venda</button>
+      <button class="chip" data-f="aluguel" aria-pressed="false">Para alugar</button>
+    </div>
+    <label class="filters__city"><span class="sr">Cidade</span>
+      <select id="fCity">
+        <option value="">Todas as cidades</option>
+        <option>Santo André</option>
+        <option>São Bernardo do Campo</option>
+        <option>São Caetano do Sul</option>
+      </select>
+    </label>
+    <p class="filters__count" aria-live="polite"><b id="catCount">6</b> imóveis</p>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>Nenhum imóvel com esse filtro agora. <button class="link" id="clearF" type="button">Ver todos</button></p>
+</section>
+
+<!-- TOUR: cômodos que se abrem no scroll -->
+<section class="tour" id="tour" aria-labelledby="tour-h">
+  <div class="tour__sticky">
+    <div class="tour__imgs">
+      <img class="tour__img is-on" data-i="0" src="img/f192968130.webp" alt="Sala integrada à cozinha com iluminação embutida" loading="lazy">
+      <img class="tour__img" data-i="1" src="img/f186239762.webp" alt="Cozinha e mesa de jantar com luz natural" loading="lazy">
+      <img class="tour__img" data-i="2" src="img/f196043410-960.webp" alt="Quarto com cama de casal e luz da janela" loading="lazy">
+      <img class="tour__img" data-i="3" src="img/f198617474.webp" alt="Banheiro com bancada de madeira e box de vidro" loading="lazy">
+    </div>
+    <div class="tour__shade"></div>
+    <div class="tour__copy">
+      <p class="eyebrow">Tour pelos cômodos</p>
+      <h2 id="tour-h" class="title">Entre. <em class="gold-text">A casa é sua.</em></h2>
+      <ol class="tour__list">
+        <li class="is-on" data-i="0"><span>01</span>Sala de estar</li>
+        <li data-i="1"><span>02</span>Cozinha e jantar</li>
+        <li data-i="2"><span>03</span>Quarto</li>
+        <li data-i="3"><span>04</span>Banheiro</li>
+      </ol>
+    </div>
+    <p class="tour__big" id="tourBig" aria-hidden="true">Sala</p>
+  </div>
+</section>
+
+<!-- REGIÃO: painéis que se expandem -->
+<section class="sec region" id="regiao" aria-labelledby="reg-h">
+  <header class="sec__head reveal">
+    <p class="eyebrow">Onde atuamos</p>
+    <h2 id="reg-h" class="title">Três cidades, <em class="gold-text">um só atendimento</em></h2>
+  </header>
+  <div class="panels reveal">
+    <button class="panel is-open" type="button" data-city="Santo André" aria-expanded="true">
+      <img src="img/hero-sa-1280.webp" alt="" loading="lazy">
+      <span class="panel__shade"></span>
+      <span class="panel__num">01</span>
+      <span class="panel__body"><b>Santo André</b><span>Apartamentos no Jardim e casas na Vila Assunção.</span><em>Ver imóveis →</em></span>
+    </button>
+    <button class="panel" type="button" data-city="São Bernardo do Campo" aria-expanded="false">
+      <img src="img/f60251104-960.webp" alt="" loading="lazy">
+      <span class="panel__shade"></span>
+      <span class="panel__num">02</span>
+      <span class="panel__body"><b>São Bernardo do Campo</b><span>Sobrados no Rudge Ramos e studios no Baeta Neves.</span><em>Ver imóveis →</em></span>
+    </button>
+    <button class="panel" type="button" data-city="São Caetano do Sul" aria-expanded="false">
+      <img src="img/f36694422-960.webp" alt="" loading="lazy">
+      <span class="panel__shade"></span>
+      <span class="panel__num">03</span>
+      <span class="panel__body"><b>São Caetano do Sul</b><span>Apartamentos no Centro e no Santa Paula.</span><em>Ver imóveis →</em></span>
+    </button>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec steps" id="como" aria-labelledby="como-h">
+  <header class="sec__head reveal">
+    <p class="eyebrow">Como funciona</p>
+    <h2 id="como-h" class="title">Da primeira visita <em class="gold-text">às chaves</em></h2>
+  </header>
+  <div class="steps__line" aria-hidden="true"><span id="stepsLine"></span></div>
+  <ol class="steps__list">
+    <li class="step reveal"><span class="step__n">01</span><h3>Escolha</h3><p>Você conta o bairro, o tamanho e o valor. A ABN separa os imóveis que cabem nisso.</p></li>
+    <li class="step reveal"><span class="step__n">02</span><h3>Visita</h3><p>O corretor marca o dia, abre o imóvel e mostra cada cômodo, inclusive no sábado.</p></li>
+    <li class="step reveal"><span class="step__n">03</span><h3>Proposta e documentos</h3><p>Levamos sua proposta ao proprietário e conferimos matrícula, certidões e contrato.</p></li>
+    <li class="step reveal"><span class="step__n">04</span><h3>Chaves na mão</h3><p>Assinatura feita, vistoria de entrada pronta e as chaves com você.</p></li>
+  </ol>
+  <div class="services reveal">
+    <div><b>Comprar</b><span>Seleção por bairro e valor, apoio no financiamento.</span></div>
+    <div><b>Alugar</b><span>Contrato, vistoria e garantia antes da mudança.</span></div>
+    <div><b>Vender</b><span>Avaliação, fotos e visitas com compradores.</span></div>
+    <div><b>Anunciar</b><span>Encontramos o inquilino e cuidamos do contrato.</span></div>
+  </div>
+</section>
+
+<!-- AGENDAR VISITA -->
+<section class="visit" id="visita" aria-labelledby="visita-h">
+  <img class="visit__bg" src="img/f187101720.webp" alt="" loading="lazy">
+  <div class="visit__shade"></div>
+  <div class="visit__inner">
+    <div class="visit__copy reveal">
+      <p class="eyebrow">Agende sua visita</p>
+      <h2 id="visita-h" class="title">Vamos <em class="gold-text">conhecer</em> o seu próximo lar?</h2>
+      <p>Diga qual imóvel quer ver e o melhor dia. Um corretor da ABN confirma o horário com você.</p>
+      <ul class="visit__facts">
+        <li>Santo André, São Bernardo e São Caetano</li>
+        <li>Visitas de segunda a sábado</li>
+      </ul>
+    </div>
+    <form class="form reveal" id="form" novalidate>
+      <div class="form__row">
+        <label class="field"><span>Nome</span><input id="fName" name="nome" type="text" autocomplete="name" required></label>
+        <label class="field"><span>Telefone ou email</span><input id="fContact" name="contato" type="text" autocomplete="email" required></label>
+      </div>
+      <div class="form__row">
+        <label class="field"><span>Interesse</span>
+          <select id="fDeal" name="interesse"><option>Comprar</option><option>Alugar</option><option>Vender meu imóvel</option><option>Anunciar para locação</option></select>
+        </label>
+        <label class="field"><span>Dia preferido</span><input id="fDay" name="dia" type="text" autocomplete="off" placeholder="Ex.: sábado de manhã"></label>
+      </div>
+      <label class="field"><span>Imóvel</span><input id="fProp" name="imovel" type="text" autocomplete="off" placeholder="Ex.: Sobrado no Rudge Ramos"></label>
+      <button class="btn btn--gold btn--block" type="submit">Agendar visita</button>
+      <p class="form__msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <img class="footer__logo" src="img/logo-abn-512.webp" alt="ABN Imóveis: imóveis, locação e vendas" width="180" height="180" loading="lazy">
+    <p class="footer__big">Imóveis, locação e vendas <em class="gold-text">no ABC Paulista.</em></p>
+  </div>
+  <div class="footer__cols">
+    <div><h3>Cidades</h3><ul><li>Santo André</li><li>São Bernardo do Campo</li><li>São Caetano do Sul</li></ul></div>
+    <div><h3>Navegue</h3><ul><li><a href="#destaques">Destaques</a></li><li><a href="#imoveis">Imóveis</a></li><li><a href="#como">Como funciona</a></li></ul></div>
+    <div><h3>Atendimento</h3><ul><li><a href="#visita">Agendar visita</a></li><li>Segunda a sábado</li></ul></div>
+  </div>
+  <div class="footer__legal">
+    <span>© 2026 ABN Imóveis</span>
+    <a href="creditos.html">Créditos das fotos</a>
+    <span>Prévia desenvolvida por <a href="https://hctoliv.github.io/previaja/" target="_blank" rel="noopener">Prévia Já</a></span>
+  </div>
+</footer>
+
+<!-- MODAL DO IMÓVEL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box">
+    <button class="modal__close" type="button" data-close aria-label="Fechar">✕</button>
+    <div class="modal__gallery">
+      <img id="mImg" src="data:," alt="">
+      <div class="modal__thumbs" id="mThumbs"></div>
+    </div>
+    <div class="modal__info">
+      <p class="modal__tag" id="mTag"></p>
+      <h3 id="mTitle"></h3>
+      <p class="modal__where" id="mWhere"></p>
+      <p class="modal__price gold-text" id="mPrice"></p>
+      <ul class="specs specs--big" id="mSpecs"></ul>
+      <p class="modal__desc" id="mDesc"></p>
+      <ul class="modal__feats" id="mFeats"></ul>
+      <a class="btn btn--gold btn--block" href="#visita" id="mBook">Agendar visita neste imóvel</a>
+    </div>
+  </div>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>
