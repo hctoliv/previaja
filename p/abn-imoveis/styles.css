@@ -399,3 +399,16 @@ em.gold-text{font-style:italic}
 .gate__foot{margin-top:26px;padding-top:18px;border-top:1px solid rgba(150,180,255,.12);font:12px "DM Mono",ui-monospace,monospace;color:#7b8bb3;letter-spacing:.04em}
 body.is-gated .loader{visibility:hidden}
 @media (max-width:480px){.gate__form{flex-direction:column}.gate__form input{flex:none}.gate__form button{width:100%}}
+
+/* WhatsApp */
+.btn--wa svg,.wa-float svg{width:20px;height:20px;flex:none}
+.btn--wa{margin-top:10px}
+.form__note{font-size:13px;color:var(--mute)}
+.visit__facts a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid rgba(246,214,138,.4)}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:10px;height:56px;padding:0 20px 0 16px;border-radius:999px;background:var(--grad);background-size:200% 100%;color:#120e05;font-weight:700;font-size:15px;text-decoration:none;
+  box-shadow:0 16px 40px -14px rgba(217,169,63,.8);transition:transform .4s var(--ease),opacity .4s,background-position .8s var(--ease)}
+.wa-float svg{width:24px;height:24px}
+.wa-float:hover{transform:translateY(-3px);background-position:100% 0}
+.wa-float.is-hidden{opacity:0;transform:translateY(20px);pointer-events:none}
+body.is-loading .wa-float,body.is-gated .wa-float{opacity:0;pointer-events:none}
+@media (max-width:640px){.wa-float{right:16px;bottom:16px;width:56px;padding:0;justify-content:center}.wa-float span{display:none}}

@@ -4,6 +4,8 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
   const isPhone = () => innerWidth <= 640;
+  const WA = '5511999372525';
+  const wa = (t) => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
 
   /* imóveis fictícios da prévia */
   const P = [
@@ -129,6 +131,7 @@
     th.innerHTML = imgs.map((k, i) => `<button type="button" data-k="${k}" aria-label="Foto ${i + 1}"><img src="${src(k.endsWith('-960') ? k : k + '-960')}" alt=""></button>`).join('');
     $$('button', th).forEach((b) => b.addEventListener('click', () => show(b.dataset.k)));
     show(imgs[0]);
+    $('#mWa').href = wa(`Olá, ABN! Tenho interesse no imóvel: ${p.title}, ${p.hood} (${p.city}), ${p.price}. Podemos conversar?`);
     $('#mBook').onclick = () => { closeModal(false); $('#fProp').value = `${p.title}, ${p.hood}`; $('#fDeal').value = p.deal === 'venda' ? 'Comprar' : 'Alugar'; };
     modal.hidden = false; document.body.classList.add('is-locked'); $('.modal__close').focus();
   }
@@ -189,6 +192,9 @@
     if (!reduce && vr.top < H && vr.bottom > 0) vBg.style.transform = `translateY(${(vr.top / H) * -60 - 40}px)`;
   };
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  const waF = $('#waFloat');
+  const waIO = new IntersectionObserver((es) => { const vis = es.some((e) => e.isIntersecting); waF.classList.toggle('is-hidden', vis); }, { threshold: 0.2 });
+  [$('#visita'), $('.footer')].forEach((el) => waIO.observe(el));
   addEventListener('resize', onScroll); onScroll();
 
   /* cursor */
@@ -211,7 +217,11 @@
     const req = [$('#fName'), $('#fContact')]; let bad = null;
     req.forEach((i) => { const ok = i.value.trim().length > 1; i.setAttribute('aria-invalid', !ok); if (!ok && !bad) bad = i; });
     if (bad) { msg.textContent = 'Preencha seu nome e um telefone ou email.'; bad.focus(); return; }
-    msg.textContent = `Pronto, ${$('#fName').value.trim().split(' ')[0]}. Um corretor da ABN vai confirmar sua visita.`;
+    const line = (k, v) => (v ? `\n${k}: ${v}` : '');
+    const text = `Olá, ABN! Quero agendar uma visita.${line('Nome', $('#fName').value.trim())}${line('Contato', $('#fContact').value.trim())}${line('Interesse', $('#fDeal').value)}${line('Imóvel', $('#fProp').value.trim())}${line('Dia preferido', $('#fDay').value.trim())}`;
+    const w = window.open(wa(text), '_blank');
+    if (w) w.opener = null; else location.href = wa(text);
+    msg.textContent = `Pronto, ${$('#fName').value.trim().split(' ')[0]}. Abrimos o WhatsApp da ABN com o seu pedido.`;
     form.reset();
   });
 })();
