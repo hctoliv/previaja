@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Victoria Oda · Psicopedagoga nos Jardins, São Paulo</title>
+<meta name="description" content="Psicopedagogia infantil com afeto e brincadeira. Avaliação e acompanhamento de dificuldades de aprendizagem na Alameda Jaú, Jardins, São Paulo.">
+<meta name="theme-color" content="#F5F1E8">
+<link rel="preload" href="../../fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+
+<!-- ===== TELA DE SENHA · PRÉVIA JÁ ===== -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate__card">
+    <img class="gate__logo" src="img/previaja-logo.svg" alt="Prévia Já" width="196" height="48">
+    <div class="gate__browser" aria-hidden="true"><i></i><i></i><i></i><span>victoriaoda.com.br</span></div>
+    <p class="gate__kicker">Prévia exclusiva</p>
+    <h1 class="gate__title" id="gate-title">Olá, Victoria! <span>Seu site está pronto pra você ver.</span></h1>
+    <p class="gate__text">Preparamos este projeto pensando no seu trabalho com as crianças. Digite a senha que enviamos no WhatsApp pra abrir a prévia.</p>
+    <form class="gate__form" id="gate-form" novalidate>
+      <label class="sr" for="gate-pass">Senha</label>
+      <input id="gate-pass" type="password" inputmode="text" autocomplete="off" placeholder="Digite a senha" required>
+      <button type="submit">Ver minha prévia <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="gate__error" id="gate-error" role="alert" hidden>Senha incorreta. Confira a mensagem no WhatsApp e tente de novo.</p>
+    <p class="gate__foot">Prévia Já · sites profissionais no ar em 48 horas</p>
+  </div>
+</div>
+
+<!-- ===== BOAS-VINDAS ===== -->
+<div class="welcome" id="welcome" hidden aria-live="polite">
+  <img src="img/previaja-logo.svg" alt="" width="160" height="39">
+  <p>Bem-vinda, Victoria!</p>
+  <span>Abrindo a sua prévia…</span>
+</div>
+
+<!-- ===== SITE ===== -->
+<div class="site" id="site" hidden>
+<header class="hd">
+  <a class="hd__brand" href="#inicio"><b>Victoria Oda</b><span>Psicopedagoga</span></a>
+  <nav class="hd__nav" aria-label="Principal">
+    <a href="#sinais">Sinais</a><a href="#como">Como funciona</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas</a>
+  </nav>
+  <a class="btn btn--sm js-wa" href="#">Agendar avaliação</a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero__txt">
+      <p class="eyebrow">Psicopedagogia infantil · Jardins, SP</p>
+      <h1>Cada criança aprende <em>do seu jeito.</em></h1>
+      <p class="lead">Avaliação e acompanhamento das dificuldades de aprendizagem com afeto, escuta e muita brincadeira. Pra que aprender volte a ser leve.</p>
+      <div class="hero__cta">
+        <a class="btn js-wa" href="#">Agendar uma avaliação</a>
+        <a class="link" href="#sinais">Ver os sinais de alerta ↓</a>
+      </div>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <div class="blob blob--a"></div><div class="blob blob--b"></div>
+      <figure class="hero__photo"><img src="img/sessao.webp" alt="" width="720" height="760"></figure>
+      <span class="letter l1">A</span><span class="letter l2">b</span><span class="letter l3">3</span><span class="letter l4">c</span>
+    </div>
+  </section>
+
+  <section class="signs" id="sinais">
+    <div class="wrap">
+      <p class="eyebrow">Fique atento</p>
+      <h2>Seu filho pode estar <em>precisando de ajuda</em> se…</h2>
+      <ul class="signs__grid">
+        <li><span>1</span>Demora pra aprender letras e números</li>
+        <li><span>2</span>Mistura letras ou troca sons ao escrever</li>
+        <li><span>3</span>Tem dificuldade pra se concentrar</li>
+        <li><span>4</span>Sente desânimo ou frustração com a escola</li>
+      </ul>
+      <p class="signs__note">Esses sinais não são um diagnóstico. Eles mostram que vale conversar com uma profissional e entender o que está acontecendo.</p>
+    </div>
+  </section>
+
+  <section class="play">
+    <div class="wrap play__grid">
+      <figure class="play__photo"><img src="img/materiais.webp" alt="Letras coloridas e massinha usadas nas sessões" width="640" height="420" loading="lazy"></figure>
+      <div>
+        <p class="eyebrow">O brincar também ensina</p>
+        <h2>Não é só lição no papel que importa.</h2>
+        <p>O afeto, a conexão e o lúdico são pilares do desenvolvimento da aprendizagem. É brincando que a criança se sente à vontade pra expressar emoções e desenvolver habilidades cognitivas, sociais e motoras.</p>
+        <p>Por isso cada sessão alterna momentos de brincadeira e atividades com foco no que a criança precisa desenvolver.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="como">
+    <div class="wrap">
+      <p class="eyebrow">Como funciona</p>
+      <h2>Do primeiro contato <em>ao acompanhamento</em></h2>
+      <ol class="how__steps">
+        <li><b>01</b><h3>Conversa com a família</h3><p>Vocês me contam a história da criança, a rotina e o que preocupa.</p></li>
+        <li><b>02</b><h3>Avaliação psicopedagógica</h3><p>Atividades e brincadeiras pra entender como a criança aprende e onde estão as dificuldades.</p></li>
+        <li><b>03</b><h3>Plano personalizado</h3><p>Estratégias pensadas pro jeito único de aprender de cada criança.</p></li>
+        <li><b>04</b><h3>Acompanhamento</h3><p>Sessões semanais e conversas com a família e, quando faz sentido, com a escola.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="tips">
+    <div class="wrap">
+      <p class="eyebrow">Pra você usar em casa</p>
+      <h2>Adaptação escolar <em>mais leve</em></h2>
+      <div class="tips__grid">
+        <article><b>1</b><p>Leve a criança pra conhecer o ambiente antes das aulas começarem.</p></article>
+        <article><b>2</b><p>Crie uma rotina clara: horário pra dormir, acordar e se preparar.</p></article>
+        <article><b>3</b><p>Evite despedidas longas. Diga que vai voltar, sorria e saia confiante.</p></article>
+        <article><b>4</b><p>Acolha os sentimentos: "Eu sei que é difícil, mas estou aqui com você."</p></article>
+        <article><b>5</b><p>Combine algo especial pro fim do dia e pergunte qual foi a parte mais divertida.</p></article>
+      </div>
+      <blockquote class="tips__quote">O tédio também constrói a imaginação.</blockquote>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="wrap about__grid">
+      <img class="about__photo" src="img/victoria.webp" alt="Victoria Oda, psicopedagoga" width="330" height="330" loading="lazy">
+      <div>
+        <p class="eyebrow">Quem vai acompanhar seu filho</p>
+        <h2>Oi, eu sou a <em>Victoria.</em></h2>
+        <p>Sou psicopedagoga e trabalho com crianças que enfrentam desafios na leitura, na escrita e na matemática. Acredito que cada pequeno tem um jeito único de aprender, e meu trabalho é descobrir esse jeito junto com a família.</p>
+        <p>Atendo nos Jardins, em São Paulo, num espaço pensado pra criança se sentir em casa.</p>
+        <a class="link" href="https://www.instagram.com/victoriaoda.pp/" target="_blank" rel="noopener noreferrer">@victoriaoda.pp no Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="duvidas">
+    <div class="wrap">
+      <p class="eyebrow">Dúvidas frequentes</p>
+      <h2>Pode perguntar</h2>
+      <details><summary>O que faz uma psicopedagoga?</summary><p>Investiga como a criança aprende e o que está dificultando esse processo, e cria estratégias pra que ela avance na escola com mais segurança.</p></details>
+      <details><summary>A partir de que idade?</summary><p>O acompanhamento pode começar desde a alfabetização. Na conversa inicial a gente vê se faz sentido pro momento do seu filho.</p></details>
+      <details><summary>Preciso de encaminhamento da escola?</summary><p>Não. Muitas famílias procuram por conta própria ao perceber os sinais. Se a escola já fez alguma observação, ela ajuda muito na avaliação.</p></details>
+      <details><summary>Quanto tempo dura o acompanhamento?</summary><p>Depende de cada criança. Depois da avaliação eu explico o plano e a frequência das sessões.</p></details>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Vamos conversar sobre <em>o seu filho?</em></h2>
+      <p>Me chama no WhatsApp e agende a conversa inicial.</p>
+      <a class="btn btn--light js-wa" href="#">Falar com a Victoria no WhatsApp</a>
+      <address>Alameda Jaú, 72 · Jardim Paulista · São Paulo, SP<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Alameda+Ja%C3%BA%2C+72+S%C3%A3o+Paulo" target="_blank" rel="noopener noreferrer">Ver no mapa ↗</a></address>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <p>Victoria Oda · Psicopedagoga · São Paulo, SP</p>
+  <p class="ft__made">Prévia criada por <b>Prévia Já</b></p>
+</footer>
+
+<a class="wa-float js-wa" href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg></a>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

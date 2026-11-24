@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /previaja/p/
+Disallow: /p/
 
 Sitemap: https://hctoliv.github.io/previaja/sitemap.xml
