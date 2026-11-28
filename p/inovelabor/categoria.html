@@ -1,0 +1,554 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Categoria InoveLabor</title><meta name="claude:viewport-fit-sides" content="cover"></head><body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: estrutura de vitrine curada (campanha escura no topo, prateleiras por categoria com eyebrow + título, prova social e atendimento, rodapé escuro) */
+:root{
+  --ink:#0B1716; --pet:#003F3C; --teal:#278787; --por:#F7F4EC; --paper:#FFFFFF; --mint:#4AF2AA;
+  --line:#E3E0D7; --muted:#5E6E6B; --night:#060B0B; --night2:#0E1A19;
+  --f:'Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{margin:0 0 6px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:500}
+h2{margin:0;font-size:clamp(20px,2.2vw,26px);font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+
+/* topo */
+.top{background:var(--pet);color:#DDE9E6;font-size:12px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:7px}
+.top nav{display:flex;gap:18px}
+.top b{font-weight:500;color:#fff}
+header.h{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.h .row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-block:14px}
+.search{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:0 6px 0 16px;height:42px;max-width:360px;background:#FBFAF7}
+.search input{border:0;background:transparent;font:inherit;flex:1;min-width:0;outline:none}
+.search button{flex:none;border:0;background:var(--pet);color:#fff;width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+.search{grid-area:s}.logo{grid-area:l}.acts{grid-area:a}
+.h .row{grid-template-areas:'s l a'}
+.logo img{height:46px;width:auto}
+.acts{display:flex;justify-content:flex-end;gap:20px;align-items:center;font-size:12px}
+.act{display:flex;align-items:center;gap:8px;line-height:1.25}
+.act small{display:block;color:var(--muted)}
+.cart{position:relative}
+.cart i{position:absolute;top:-6px;right:-8px;background:var(--teal);color:#fff;font-style:normal;font-size:10px;border-radius:999px;padding:0 5px}
+.nav{border-top:1px solid var(--line)}
+.nav .wrap{display:flex;gap:26px;overflow-x:auto;scrollbar-width:none;padding-block:12px;font-size:13px;white-space:nowrap}
+.nav a:hover{color:var(--teal)}
+.nav .hot{color:var(--pet);font-weight:600;display:flex;align-items:center;gap:6px}
+.nav .hot::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 3px rgba(74,242,170,.25)}
+
+/* barra campanha */
+.camp{background:var(--night);color:#fff;font-size:12px;letter-spacing:.08em}
+.camp .wrap{display:flex;align-items:center;justify-content:center;gap:14px;padding-block:9px;flex-wrap:wrap;text-align:center}
+.camp b{color:var(--mint);font-weight:600}
+.cd{display:flex;gap:4px}
+.cd span{background:var(--mint);color:var(--night);font-weight:600;border-radius:4px;padding:2px 7px;font-variant-numeric:tabular-nums;letter-spacing:0}
+.tick{background:var(--night2);color:#AFC3BF;font-size:11px;letter-spacing:.14em;text-transform:uppercase;overflow:hidden;white-space:nowrap}
+.tick div{display:inline-flex;gap:48px;padding-block:8px;animation:mv 40s linear infinite}
+.tick span::after{content:"•";margin-left:48px;color:var(--teal)}
+@keyframes mv{to{transform:translateX(-50%)}}
+
+/* hero */
+.hero{position:relative;background:var(--night);color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,11,11,.95) 0,rgba(6,11,11,.75) 38%,rgba(6,11,11,.1) 70%),linear-gradient(0deg,rgba(6,11,11,.6),transparent 40%)}
+.hero .wrap{position:relative;z-index:1;padding-block:clamp(56px,9vw,120px);min-height:min(560px,70vw);display:flex;flex-direction:column;justify-content:center}
+.hero .kick{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#CFE0DC}
+.hero .kick::before{content:"";width:36px;height:1px;background:#CFE0DC}
+.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.02;font-weight:400;letter-spacing:-.035em;margin:16px 0 14px;max-width:12ch;text-wrap:balance}
+.hero h1 b{font-weight:600;color:var(--mint)}
+.hero p{max-width:44ch;color:#D5E2DF;margin:0 0 28px;font-size:15px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 10px 0 26px;border-radius:999px;background:var(--mint);color:var(--night);font-weight:600;font-size:14px}
+.btn i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--night);color:var(--mint);font-style:normal}
+.btn.ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.25);padding:0 24px}
+
+/* escolhidos */
+.bfrail{background:var(--night);color:#fff}
+.bfrail .wrap{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:center;padding-block:28px 36px}
+.bfrail h2{font-size:24px}
+.bfrail p{color:#9FB4B0;margin:6px 0 0;font-size:13px}
+.bfgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bfc{display:flex;flex-direction:column;gap:6px;font-size:12px}
+.bfc .pimg{background:#fff;border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:10px;transition:transform .2s}
+.bfc:hover .pimg{transform:translateY(-3px)}
+.bfc img{width:100%;height:100%;object-fit:contain}
+.bn{color:#E6EEEC;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.bp s{color:#7F928F}
+.bp b{background:var(--mint);color:var(--night);border-radius:4px;padding:0 5px;font-size:10px}
+.bv{font-weight:600;font-size:15px;color:#fff}
+
+/* benefícios */
+.ben{border-bottom:1px solid var(--line)}
+.ben .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.ben .wrap>div{display:flex;gap:12px;align-items:center;padding:18px 14px;font-size:12px;line-height:1.35;border-right:1px solid var(--line)}
+.ben .wrap>div:last-child{border-right:0}
+.ben b{display:block;font-weight:500;font-size:13px}
+.ben span{color:var(--muted)}
+.ben svg{flex:none;color:var(--teal)}
+
+/* seções */
+.sec{padding-block:44px 8px}
+.center{text-align:center}
+.pops{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:14px;margin-top:22px}
+.pop{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:13px}
+.pop .pimg{width:100%;aspect-ratio:1;border-radius:14px;background:var(--por);display:grid;place-items:center;padding:12px;transition:background .2s}
+.pop:hover .pimg{background:#ECE8DC}
+.pop img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.sh-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
+.more{font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:2px;white-space:nowrap}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 3*14px)/4);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.card{scroll-snap-align:start;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;background:#fff;min-width:0}
+.card .ph{position:relative;aspect-ratio:1;background:var(--por);border-radius:8px;display:grid;place-items:center;padding:14px}
+.card .ph img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.badge{position:absolute;top:8px;left:8px;background:var(--pet);color:#fff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:2px 7px}
+.card .nm{font-size:13px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.7em}
+.pr{display:flex;flex-direction:column;gap:1px;min-height:84px}
+.pr .was{font-size:11px;color:var(--muted);display:flex;gap:6px;align-items:center;min-height:16px}
+.pr .off{background:var(--mint);color:var(--night);font-size:10px;border-radius:4px;padding:0 5px}
+.pr .from{font-size:11px;color:var(--muted)}
+.pr strong{font-size:18px;font-weight:600;letter-spacing:-.01em}
+.pix{font-size:12px;color:var(--teal);font-weight:500}
+.pix em{font-style:normal;color:var(--muted);font-weight:400}
+.inst{font-size:11px;color:var(--muted)}
+.buy{display:flex;gap:8px;margin-top:auto}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;height:38px}
+.qty button{border:0;background:none;width:28px;height:100%}
+.qty span{width:18px;text-align:center;font-variant-numeric:tabular-nums}
+.add{flex:1;display:grid;place-items:center;background:var(--pet);color:#fff;border-radius:8px;font-size:12px;font-weight:500;letter-spacing:.04em;height:38px}
+.add:hover{background:var(--teal)}
+.wa{font-size:11px;text-align:center;color:var(--teal)}
+
+/* segmentos */
+.seg{background:var(--por);margin-top:36px}
+.seg .wrap{padding-block:44px;display:grid;grid-template-columns:1fr 2fr;gap:36px;align-items:center}
+.seg p.lead{color:var(--muted);margin:10px 0 0;max-width:38ch}
+.segs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.segs div{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--line)}
+.segs b{display:block;font-weight:500;font-size:15px;margin-bottom:6px}
+.segs span{color:var(--muted);font-size:12px}
+
+/* banners */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ban{position:relative;border-radius:16px;overflow:hidden;min-height:260px;display:flex;align-items:flex-end;padding:28px;color:#fff;background:linear-gradient(135deg,var(--pet),#0B5E5A)}
+.ban.alt{background:linear-gradient(135deg,#0E1A19,#1F3B39)}
+.ban img{position:absolute;right:20px;bottom:0;height:88%;width:auto;object-fit:contain}
+.ban div{position:relative;max-width:55%}
+.ban small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#BFE0DA}
+.ban h3{font-size:28px;font-weight:400;letter-spacing:-.02em;line-height:1.1;margin:8px 0 14px}
+.ban h3 b{font-weight:600}
+.pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;font-size:12px}
+.wide{border-radius:16px;overflow:hidden;background:var(--pet);color:#fff;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;min-height:240px}
+.wide .tx{padding:36px}
+.wide h3{font-size:clamp(24px,3vw,34px);font-weight:400;margin:8px 0 12px;letter-spacing:-.02em}
+.wide p{color:#CFE3DF;margin:0 0 20px;max-width:46ch}
+.wide .pics{display:flex;gap:10px;padding:24px;justify-content:center}
+.wide .pics span{background:#fff;border-radius:12px;padding:10px;width:31%;aspect-ratio:3/4;display:grid;place-items:center;min-width:0}
+.wide .pics img{width:100%;height:100%;object-fit:contain}
+
+/* mosaico */
+.mos{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:200px 200px;gap:14px;margin-top:20px}
+.mos a{position:relative;border-radius:14px;overflow:hidden;background:var(--por);display:flex;align-items:flex-end;padding:18px}
+.mos a:first-child{grid-row:span 2;background:var(--night);color:#fff}
+.mos img{position:absolute;inset:12% 10% 26%;width:80%;height:62%;object-fit:contain;mix-blend-mode:multiply}
+.mos a:first-child img{mix-blend-mode:normal;inset:8% 8% 22%;width:84%;height:70%}
+.mos b{position:relative;font-weight:500;font-size:15px}
+.mos small{position:relative;display:block;font-size:11px;color:var(--muted)}
+.mos a:first-child small{color:#9FB4B0}
+
+/* conteúdo */
+.blog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:4px}
+.post{display:flex;flex-direction:column;gap:10px}
+.post .pimg{aspect-ratio:16/10;border-radius:12px;background:var(--por);display:grid;place-items:center;padding:16px}
+.post img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.post b{font-weight:500;font-size:15px;line-height:1.3}
+.post span{color:var(--muted);font-size:12px}
+
+/* atendimento */
+.att{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.att div{border:1px solid var(--line);border-radius:12px;padding:18px}
+.att small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.att b{font-weight:500;font-size:15px;user-select:all}
+
+/* tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 18px}
+.tabs button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:12px}
+.tabs button[aria-selected="true"]{background:var(--pet);color:#fff;border-color:var(--pet)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+
+/* newsletter + rodapé */
+.news{background:var(--night);color:#fff;margin-top:56px}
+.news .wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding-block:44px;border-bottom:1px solid #1E2B2A}
+.news h3{font-size:clamp(22px,2.6vw,30px);font-weight:400;margin:6px 0 8px;letter-spacing:-.02em}
+.news h3 b{font-weight:600;color:var(--mint)}
+.news p{color:#9FB4B0;margin:0;font-size:13px}
+.news form{display:flex;gap:8px;flex-wrap:wrap}
+.news input{flex:1;min-width:180px;height:48px;border-radius:999px;border:1px solid #2A3B39;background:#0E1A19;color:#fff;padding:0 18px;font:inherit}
+.news button{height:48px;border-radius:999px;border:0;background:var(--mint);color:var(--night);font-weight:600;padding:0 22px}
+.news .ok{color:var(--mint);font-size:13px;width:100%}
+footer{background:var(--night);color:#C9D6D3;font-size:13px}
+footer .cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding-block:40px}
+footer h4{margin:0 0 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#7F928F;font-weight:500}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer .legal{border-top:1px solid #1E2B2A;padding-block:16px;font-size:11px;color:#6F817E;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-logo{height:40px;width:auto;margin-bottom:14px}
+
+/* notas */
+.notes-btn{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:8px;border:0;border-radius:999px;background:var(--ink);color:#fff;padding:10px 16px;font-size:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.notes-btn i{width:8px;height:8px;border-radius:50%;background:var(--mint);font-style:normal}
+[data-note]{position:relative}
+.nt{display:none}
+body.show-notes .nt{display:block;position:absolute;z-index:40;top:10px;right:max(16px,env(safe-area-inset-right,0px));max-width:min(360px,calc(100% - 32px));background:#FFF8D6;color:#2B2611;border:1px solid #E8D88A;border-radius:10px;padding:10px 12px 10px 40px;font-size:12px;line-height:1.45;box-shadow:0 10px 28px rgba(0,0,0,.18);text-align:left;letter-spacing:0;text-transform:none;font-weight:400}
+body.show-notes .nt::before{content:attr(data-n);position:absolute;left:10px;top:10px;width:22px;height:22px;border-radius:50%;background:#2B2611;color:#FFF8D6;display:grid;place-items:center;font-size:11px;font-weight:600}
+body.show-notes .nt b{font-weight:600}
+.wa-float{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;width:52px;height:52px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+
+
+/* caixas de imagem: proporção fixa, imagem contida */
+.bfc .pimg,.pop .pimg,.card .ph,.post .pimg,.wide .pics span{position:relative;overflow:hidden}
+.bfc .pimg img,.pop .pimg img,.card .ph img,.post .pimg img,.wide .pics span img{position:absolute;inset:10%;width:80%;height:80%;object-fit:contain}
+.mos img{inset:10% 12% 34%;height:56%;width:76%}
+.mos a:first-child img{inset:8% 8% 24%;width:84%;height:68%}
+
+@media (max-width:980px){
+  .h .row{grid-template-columns:auto 1fr;grid-template-areas:'l a' 's s';row-gap:12px;padding-block:10px 12px}
+  .h .search{max-width:none;height:44px}
+  .logo{justify-self:start}
+  .logo img{height:40px}
+  .act small,.act .lbl{display:none}
+  .bfrail .wrap{grid-template-columns:1fr}
+  .bfgrid{grid-template-columns:repeat(4,minmax(150px,1fr));overflow-x:auto}
+  .ben .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ben .wrap>div:nth-child(2){border-right:0}
+  .pops{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .rail{grid-auto-columns:calc((100% - 14px)/2.2)}
+  .seg .wrap{grid-template-columns:1fr}
+  .segs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .duo,.wide,.news .wrap{grid-template-columns:1fr}
+  .ban div{max-width:62%}
+  .mos{grid-template-columns:1fr 1fr;grid-template-rows:240px 170px 170px}
+  .mos a:first-child{grid-column:span 2;grid-row:auto}
+  .blog{grid-template-columns:1fr;}
+  .att{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  footer .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:520px){
+  .top nav{display:none}
+  .bfgrid{grid-template-columns:repeat(4,150px)}
+  .rail{grid-auto-columns:72%}
+  .pops{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+  .pop{font-size:11px}
+  .ben .wrap>div{padding:14px 8px}
+  .att{grid-template-columns:1fr}
+  .blog .post:nth-child(n+2){display:none}
+}
+@media (prefers-reduced-motion:reduce){.tick div{animation:none}*{transition:none!important}}
+</style>
+
+<div class="top" data-note="1"><div class="wrap"><nav><a href="https://www.inovelabor.com.br/" target="_blank" rel="noopener">Como comprar</a><a href="https://www.inovelabor.com.br/" target="_blank" rel="noopener">Fale conosco</a></nav><span>Pagando com <b>Pix</b> você ganha desconto</span></div>
+<div class="nt" data-n="1"><b>Barra superior + cabeçalho.</b> Logo no centro, busca à esquerda e WhatsApp, conta e carrinho à direita, como na Maria Pia. Na Tray: Editor de temas → cabeçalho (HTML/CSS). O telefone de vendas fica sempre visível, porque cliente B2B compra muito por atendimento.</div></div>
+
+<header class="h">
+  <div class="wrap row">
+    <form class="search" id="sf" role="search" action="https://www.inovelabor.com.br/loja/busca.php" method="get" target="_blank"><input type="hidden" name="loja" value="1317908"><label for="q" hidden>Buscar produtos</label><input id="q" name="palavra_busca" type="search" placeholder="O que você procura? Becker, ponteira, pHmetro…" autocomplete="off"><button type="submit" aria-label="Buscar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button></form>
+    <a class="logo" href="https://www.inovelabor.com.br/" target="_blank" rel="noopener"><img src="img/logo.png" alt="InoveLabor"></a>
+    <div class="acts">
+      <a class="act" href="https://wa.me/551127912239" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg><span class="lbl">WhatsApp<small>(11) 2791-2239</small></span></a>
+      <a class="act" href="https://www.inovelabor.com.br/my-account/login" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="lbl">Entrar<small>ou cadastrar</small></span></a>
+      <a class="act cart" href="https://www.inovelabor.com.br/" target="_blank" rel="noopener" aria-label="Carrinho"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 7h14l-1.5 12h-11z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><i>0</i></a>
+    </div>
+  </div>
+  <div class="nav"><div class="wrap"><a class="hot" href="#bf">InoveBlack</a><a href="https://www.inovelabor.com.br/vidrarias" target="_blank" rel="noopener">Vidrarias</a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Equipamentos</a><a href="https://www.inovelabor.com.br/plasticos" target="_blank" rel="noopener">Plásticos</a><a href="https://www.inovelabor.com.br/termometros" target="_blank" rel="noopener">Termômetros</a><a href="https://www.inovelabor.com.br/modelos-anatomicos" target="_blank" rel="noopener">Modelos anatômicos</a><a href="https://www.inovelabor.com.br/consumiveis" target="_blank" rel="noopener">Consumíveis</a><a href="https://www.inovelabor.com.br/reagentes-e-meios-de-cultura" target="_blank" rel="noopener">Reagentes & meios</a><a href="https://www.inovelabor.com.br/inox-e-ferragens" target="_blank" rel="noopener">Inox & ferragens</a><a href="https://www.inovelabor.com.br/porcelanas" target="_blank" rel="noopener">Porcelanas</a></div></div>
+</header>
+
+<div class="camp" data-note="2"><div class="wrap"><span><b>INOVEBLACK</b> · 10% OFF EM PRODUTOS SELECIONADOS · TERMINA EM</span><span class="cd" id="cd" aria-live="off"><span id="cd-d">00d</span><span id="cd-h">00h</span><span id="cd-m">00m</span><span id="cd-s">00s</span></span></div>
+<div class="nt" data-n="2"><b>Barra da campanha com contagem regressiva</b> até 01/12 às 23h59, para criar urgência real. Na Tray: bloco HTML + script no tema. A Tray já mostra "Oferta termina em" em cada produto em promoção, e esta barra leva isso para o site inteiro.</div></div>
+<div class="tick" aria-hidden="true"><div><span>Frete grátis para SP capital acima de R$ 499</span><span>Até 3x sem juros no cartão</span><span>Desconto à vista no Pix</span><span>Atendimento pelo WhatsApp</span><span>Frete grátis para SP capital acima de R$ 499</span><span>Até 3x sem juros no cartão</span><span>Desconto à vista no Pix</span><span>Atendimento pelo WhatsApp</span></div></div>
+
+<style>
+.pgnav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:4px;background:var(--ink);border-radius:999px;padding:4px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.pgnav a{color:#C9D6D3;font-size:12px;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.pgnav a[aria-current="page"]{background:var(--mint);color:var(--night);font-weight:600}
+@media (max-width:520px){.pgnav{bottom:calc(76px + env(safe-area-inset-bottom,0px))}.pgnav a{padding:7px 10px;font-size:11px}}
+/* categoria */
+.crumb{font-size:12px;color:var(--muted);padding-block:16px 0;display:flex;gap:8px;flex-wrap:wrap}
+.crumb a:hover{color:var(--teal)}
+.chero{background:var(--night);color:#fff;overflow:hidden;position:relative}
+.chero .wrap{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:24px;min-height:300px;padding-block:36px}
+.chero .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9FB4B0;display:flex;align-items:center;gap:10px}
+.chero .k::before{content:"";width:36px;height:1px;background:#9FB4B0}
+.chero h1{font-size:clamp(34px,4.6vw,56px);font-weight:400;letter-spacing:-.03em;margin:10px 0 8px}
+.chero p{color:#C3D3CF;margin:0;max-width:46ch}
+.chero .art{position:relative;height:280px}
+.chero .art::before{content:"";position:absolute;inset:6% 14%;border-radius:50%;background:radial-gradient(circle,rgba(39,135,135,.55),transparent 65%)}
+.chero .art img{position:absolute;bottom:0;height:96%;width:auto;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.6))}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-block:18px;scrollbar-width:thin}
+.chips a{flex:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:12px;background:#fff;white-space:nowrap}
+.chips a:hover{border-color:var(--teal);color:var(--teal)}
+.chips small{color:var(--muted)}
+.cat{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start}
+.filters{position:sticky;top:150px;font-size:13px;display:grid;gap:20px}
+.filters h3{margin:0 0 10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:500}
+.filters select{width:100%;height:40px;border:1px solid var(--line);border-radius:8px;padding:0 10px;font:inherit;background:#fff}
+.filters label{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer}
+.filters label small{margin-left:auto;color:var(--muted)}
+.ranges{display:flex;flex-wrap:wrap;gap:6px}
+.ranges button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:6px 10px;font-size:12px}
+.ranges button[aria-pressed="true"]{background:var(--pet);color:#fff;border-color:var(--pet)}
+.cgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.cbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:12px;color:var(--muted)}
+.filt-btn{display:none}
+.help{display:flex;align-items:center;gap:10px;justify-content:center;border-top:1px solid var(--line);margin-top:28px;padding-top:20px;font-size:13px}
+.help a{color:var(--teal);text-decoration:underline}
+.guide{max-width:820px;margin:40px auto 0;font-size:14px;color:#3B4A48}
+.guide h2{font-size:22px;margin:0 0 10px;color:var(--ink)}
+.guide h3{font-size:15px;margin:20px 0 6px;color:var(--ink);font-weight:500}
+.guide ul{padding-left:18px;margin:8px 0}
+.guide li{margin:4px 0}
+/* produto */
+.pp{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;padding-block:20px 10px;align-items:start}
+.gal{display:grid;grid-template-columns:76px 1fr;gap:12px;position:sticky;top:150px}
+.thumbs{display:grid;gap:10px;align-content:start}
+.thumbs button{border:1px solid var(--line);border-radius:8px;background:var(--por);aspect-ratio:1;padding:6px;position:relative;overflow:hidden}
+.thumbs button[aria-pressed="true"]{border-color:var(--pet);box-shadow:0 0 0 1px var(--pet)}
+.thumbs img{position:absolute;inset:8%;width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+.main-img{background:var(--por);border-radius:14px;aspect-ratio:1;position:relative;overflow:hidden}
+.main-img img{position:absolute;inset:8%;width:84%;height:84%;object-fit:contain;mix-blend-mode:multiply}
+.main-img .badge{z-index:1}
+.buybox .ey{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:500}
+.buybox h1{font-size:clamp(24px,2.6vw,32px);font-weight:500;letter-spacing:-.02em;line-height:1.15;margin:6px 0 6px;text-wrap:balance}
+.buybox .sub{color:var(--muted);margin:0 0 10px}
+.meta2{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);padding-bottom:16px;border-bottom:1px solid var(--line)}
+.meta2 b{color:var(--ink);font-weight:500}
+.prc{padding-block:16px;border-bottom:1px solid var(--line);display:grid;gap:4px}
+.prc strong{font-size:32px;font-weight:600;letter-spacing:-.02em}
+.prc .row2{display:flex;justify-content:space-between;font-size:13px}
+.prc .row2 span:first-child{color:var(--muted)}
+.prc .pixv{color:var(--teal);font-weight:600}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:12px;margin-top:6px}
+.avail::before{content:"";width:8px;height:8px;border-radius:50%;background:#E0A800}
+.cta2{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-top:16px}
+.cta2 .qty{height:52px}
+.cta2 .buy-now{height:52px;border:0;border-radius:10px;background:var(--pet);color:#fff;font-weight:600;letter-spacing:.08em}
+.cta2 .buy-now:hover{background:var(--teal)}
+.cta2 .ask{grid-column:1/-1;height:46px;border:1px solid var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px}
+.cta2 .ask i{width:8px;height:8px;border-radius:50%;background:#25D366;font-style:normal}
+.rows{margin-top:16px;border-top:1px solid var(--line)}
+.rows>div{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}
+.rows small{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rows span{color:var(--muted);font-size:12px;display:block}
+.cep{display:flex;gap:6px}
+.cep input{width:110px;height:34px;border:1px solid var(--line);border-radius:8px;padding:0 10px;font:inherit}
+.cep button{height:34px;border:0;border-radius:8px;background:var(--por);padding:0 12px;font-size:12px}
+.bundle{background:var(--por);margin-top:40px}
+.bundle .wrap{padding-block:36px}
+.bgrid{display:grid;grid-template-columns:200px 1fr 280px;gap:16px;align-items:stretch;margin-top:16px}
+.bmain{background:#fff;border-radius:12px;position:relative;min-height:200px}
+.bmain img{position:absolute;inset:10%;width:80%;height:80%;object-fit:contain}
+.bitems{display:grid;gap:10px}
+.bitem{display:grid;grid-template-columns:auto 64px 1fr auto;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.bitem .t{width:64px;height:64px;position:relative}
+.bitem .t img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.bitem small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.bitem b{font-weight:500;font-size:13px}
+.bitem input{width:18px;height:18px;accent-color:var(--pet)}
+.btot{background:#fff;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.btot strong{font-size:24px;font-weight:600}
+.btot span{font-size:12px;color:var(--muted)}
+.btot button{margin-top:8px;height:46px;border:0;border-radius:10px;background:var(--pet);color:#fff;font-weight:600;letter-spacing:.06em}
+.acc{border-top:1px solid var(--line);max-width:900px}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;padding:16px 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;font-weight:500}
+.acc summary::after{content:"+";font-size:18px;line-height:1}
+.acc details[open] summary::after{content:"−"}
+.acc ul{margin:0 0 16px;padding-left:18px;font-size:13px;color:#3B4A48;columns:2;column-gap:32px}
+.acc li{margin:4px 0;break-inside:avoid}
+.acc p{margin:0 0 16px;font-size:13px;color:#3B4A48}
+.acc dl{margin:0 0 16px;font-size:13px}
+.acc dt{font-weight:500;margin-top:10px}
+.acc dd{margin:2px 0 0;color:#3B4A48}
+.rev{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:16px}
+.rev .stars{font-size:22px;letter-spacing:4px;color:#D8D3C4}
+.rev button{height:44px;border-radius:10px;border:0;background:var(--pet);color:#fff;padding:0 20px;font-weight:500}
+.helpband{background:var(--night);color:#fff;margin-top:44px}
+.helpband .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:32px;flex-wrap:wrap}
+.helpband h3{margin:0;font-size:24px;font-weight:400;letter-spacing:-.02em}
+.helpband p{margin:6px 0 0;color:#9FB4B0;font-size:13px}
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(0,0,0,.06);transform:translateY(110%);transition:transform .25s}
+.sticky-buy.on{transform:none}
+.sticky-buy .wrap{display:flex;align-items:center;gap:14px;justify-content:flex-end;padding-block:10px calc(10px + env(safe-area-inset-bottom,0px))}
+.sticky-buy .nm2{margin-right:auto;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sticky-buy strong{font-size:16px}
+.sticky-buy small{display:block;color:var(--teal);font-size:11px}
+.sticky-buy a{height:44px;display:grid;place-items:center;padding:0 26px;border-radius:10px;background:var(--pet);color:#fff;font-weight:600;letter-spacing:.06em;font-size:13px}
+@media (max-width:980px){
+ .chero .wrap{grid-template-columns:1fr}.chero .art{height:200px}
+ .cat{grid-template-columns:1fr}
+ .filters{position:static;display:none}
+ .filters.open{display:grid;border:1px solid var(--line);border-radius:12px;padding:16px}
+ .filt-btn{display:inline-flex;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:12px}
+ .cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .pp{grid-template-columns:1fr;gap:24px}
+ .gal{position:static;grid-template-columns:1fr}
+ .thumbs{grid-auto-flow:column;grid-auto-columns:64px;order:2}
+ .bgrid{grid-template-columns:1fr}.bmain{display:none}
+ .rev{grid-template-columns:1fr}
+ .acc ul{columns:1}
+ .sticky-buy .nm2{display:none}
+}
+@media (max-width:520px){.bitem{grid-template-columns:auto 48px 1fr}.bitem .pz{grid-column:3}.bitem .t{width:48px;height:48px}.cgrid .card .wa{display:none}}
+</style>
+<div class="wrap crumb"><a href="index.html">Início</a><span>/</span><span>Equipamentos</span></div>
+<section class="chero" data-note="C1" style="margin-top:14px"><div class="wrap">
+  <div><span class="k">Análise · preparo · ensino</span><h1>Equipamentos</h1><p>136 equipamentos para análise, preparo de amostras e ensino: pHmetros, microscópios, agitadores, balanças e centrífugas.</p></div>
+  <div class="art"><img src="img/micro_1_cut.png" alt="" style="left:6%"><img src="img/agitador_1_cut.png" alt="" style="left:36%;height:100%"><img src="img/phmetro_cut.png" alt="" style="left:66%;height:66%"></div>
+</div><div class="nt" data-n="C1"><b>Topo de categoria com foto e uma frase</b>, como "Poltronas · a partir de R$ 3.393 no Pix" na Maria Pia. Hoje a categoria abre direto na lista. Na Tray: banner de categoria (cada categoria aceita uma imagem própria) + descrição curta.</div></section>
+<div class="wrap" data-note="C2"><div class="chips" aria-label="Subcategorias"><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Medidor de pH (pHmetro) <small>(13)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Microscópio biológico <small>(12)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Agitador magnético com aquecimento <small>(11)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Centrífuga <small>(8)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Agitador vórtex <small>(8)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Refratômetro <small>(8)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Espectrofotômetro UV e UV-VIS <small>(7)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Agitador para tubos <small>(7)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Estufa de laboratório <small>(6)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Manta aquecedora <small>(6)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Balanças <small>(5)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Micropipeta <small>(5)</small></a><a href="https://www.inovelabor.com.br/equipamentos" target="_blank" rel="noopener">Eletrodo de pH <small>(5)</small></a></div><div class="nt" data-n="C2"><b>Subcategorias em pílulas</b> no topo, roláveis no celular. Substituem a lista longa de subcategorias que hoje fica na lateral.</div></div>
+<section class="wrap" data-note="C3"><div class="cat">
+  <aside class="filters" id="filters" aria-label="Filtros">
+    <div><h3>Ordenar</h3><label class="sr" for="ord" hidden>Ordenar por</label><select id="ord"><option>Mais vendidos</option><option>Menor preço</option><option>Maior preço</option><option>Lançamentos</option></select></div>
+    <div><h3>Preço</h3><div class="ranges"><button type="button" aria-pressed="false">Até R$ 300</button><button type="button" aria-pressed="false">R$ 300 a 1.000</button><button type="button" aria-pressed="false">R$ 1.000 a 5.000</button><button type="button" aria-pressed="false">Acima de R$ 5.000</button></div></div>
+    <div><h3>Marca</h3><label><input type="checkbox"> Satra<small>22</small></label><label><input type="checkbox"> Inovelabor<small>21</small></label><label><input type="checkbox"> KASVI<small>19</small></label><label><input type="checkbox"> Solid Steel<small>13</small></label><label><input type="checkbox"> Ion<small>12</small></label><label><input type="checkbox"> OLEN<small>7</small></label></div>
+    <div><h3>Prazo de envio</h3><label><input type="checkbox"> 1 dia útil<small>1</small></label><label><input type="checkbox"> 10 dias úteis<small>46</small></label><label><input type="checkbox"> 15 dias úteis<small>32</small></label></div>
+  </aside>
+  <div><div class="cbar"><span>Mostrando 8 de 136 produtos</span><button class="filt-btn" type="button" id="fb">Filtrar e ordenar</button></div>
+  <div class="cgrid"><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/medidor-digital-multiparametros-portatil-ph-tds-ec-salinidade-orp-temperatura-e-sg" target="_blank" rel="noopener"><img src="img/bd25742ee3.jpg" alt="Medidor Digital Multiparâmetros Portátil (pH, TDS, EC, Salinidade, ORP, Temperatura e SG)" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/medidor-digital-multiparametros-portatil-ph-tds-ec-salinidade-orp-temperatura-e-sg" target="_blank" rel="noopener">Medidor Digital Multiparâmetros Portátil (pH, TDS, EC, Salinidade, ORP, Temperatura e SG)</a>
+  <div class="pr"><div class="was"></div><strong>R$ 365,00</strong><span class="pix">R$ 354,05 <em>à vista</em></span><span class="inst">ou 3x de R$ 121,67 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/medidor-digital-multiparametros-portatil-ph-tds-ec-salinidade-orp-temperatura-e-sg" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-vidro-ph-combinado-universal-com-conexao-bnc-sc09" target="_blank" rel="noopener"><img src="img/f2f26047ec.jpg" alt="Eletrodo de Vidro (pH) Combinado Universal com Conexão BNC - SC09" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-vidro-ph-combinado-universal-com-conexao-bnc-sc09" target="_blank" rel="noopener">Eletrodo de Vidro (pH) Combinado Universal com Conexão BNC - SC09</a>
+  <div class="pr"><div class="was"></div><strong>R$ 577,60</strong><span class="pix">R$ 560,27 <em>à vista</em></span><span class="inst">ou 3x de R$ 192,53 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-vidro-ph-combinado-universal-com-conexao-bnc-sc09" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/bomba-de-vacuo-tipo-membrana-vac26-bi" target="_blank" rel="noopener"><img src="img/d7f5a61cdd.jpg" alt="Bomba de Vácuo tipo Membrana - VAC26-BI" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/bomba-de-vacuo-tipo-membrana-vac26-bi" target="_blank" rel="noopener">Bomba de Vácuo tipo Membrana - VAC26-BI</a>
+  <div class="pr"><div class="was"></div><strong>R$ 1.596,00</strong><span class="pix">R$ 1.548,12 <em>à vista</em></span><span class="inst">ou 3x de R$ 532,00 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/bomba-de-vacuo-tipo-membrana-vac26-bi" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/balanca-analitica-bel-0-0001g-220g-com-calibracao-automatica-m214ai" target="_blank" rel="noopener"><img src="img/ba8535106e.jpg" alt="Balança Analítica Bel 0,0001G, 220G com Calibração Automática M214AI" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/balanca-analitica-bel-0-0001g-220g-com-calibracao-automatica-m214ai" target="_blank" rel="noopener">Balança Analítica Bel 0,0001G, 220G com Calibração Automática M214AI</a>
+  <div class="pr"><div class="was"></div><strong>R$ 6.776,00</strong><span class="pix">R$ 6.572,72 <em>à vista</em></span><span class="inst">ou 3x de R$ 2.258,67 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/balanca-analitica-bel-0-0001g-220g-com-calibracao-automatica-m214ai" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/balanca-determinadora-de-umidade-bel-i-thermo-g163l-0-001g-x-160-g-220v" target="_blank" rel="noopener"><img src="img/8d79851ef5.jpg" alt="Balança Determinadora de Umidade Bel I-Thermo G163L - 0,001G X 160 G (220V)" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/balanca-determinadora-de-umidade-bel-i-thermo-g163l-0-001g-x-160-g-220v" target="_blank" rel="noopener">Balança Determinadora de Umidade Bel I-Thermo G163L - 0,001G X 160 G (220V)</a>
+  <div class="pr"><div class="was"></div><strong>R$ 6.864,00</strong><span class="pix">R$ 6.658,08 <em>à vista</em></span><span class="inst">ou 3x de R$ 2.288,00 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/balanca-determinadora-de-umidade-bel-i-thermo-g163l-0-001g-x-160-g-220v" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-ph-de-vidro-e-65" target="_blank" rel="noopener"><img src="img/41c0e2c8a2.jpg" alt="Eletrodo de pH de vidro  E-65" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-ph-de-vidro-e-65" target="_blank" rel="noopener">Eletrodo de pH de vidro  E-65</a>
+  <div class="pr"><div class="was"></div><strong>R$ 200,00</strong><span class="pix">R$ 194,00 <em>à vista</em></span><span class="inst">ou 3x de R$ 66,67 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/eletrodo-de-ph-de-vidro-e-65" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/phmetro-de-bolso-digital-com-calibracao-automatica" target="_blank" rel="noopener"><img src="img/215a7be265.jpg" alt="pHmetro de Bolso Digital com Calibração Automática" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/phmetro-de-bolso-digital-com-calibracao-automatica" target="_blank" rel="noopener">pHmetro de Bolso Digital com Calibração Automática</a>
+  <div class="pr"><div class="was"></div><strong>R$ 64,00</strong><span class="pix">R$ 62,08 <em>à vista</em></span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/phmetro-de-bolso-digital-com-calibracao-automatica" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article><article class="card">
+  <a class="ph" href="https://www.inovelabor.com.br/equipamentos/contador-digital-de-celulas-sanguineas-com-12-teclas" target="_blank" rel="noopener"><img src="img/3e3ceacfac.jpg" alt="Contador Digital de Células Sanguíneas com 12 Teclas" loading="lazy"></a>
+  <a class="nm" href="https://www.inovelabor.com.br/equipamentos/contador-digital-de-celulas-sanguineas-com-12-teclas" target="_blank" rel="noopener">Contador Digital de Células Sanguíneas com 12 Teclas</a>
+  <div class="pr"><div class="was"></div><strong>R$ 1.216,00</strong><span class="pix">R$ 1.179,52 <em>à vista</em></span><span class="inst">ou 3x de R$ 405,33 sem juros</span></div>
+  <div class="buy"><div class="qty" role="group" aria-label="Quantidade"><button type="button" aria-label="Menos">−</button><span>1</span><button type="button" aria-label="Mais">+</button></div>
+  <a class="add" href="https://www.inovelabor.com.br/equipamentos/contador-digital-de-celulas-sanguineas-com-12-teclas" target="_blank" rel="noopener">Adicionar</a></div>
+  <a class="wa" href="https://wa.me/551127912239" target="_blank" rel="noopener">Comprar pelo WhatsApp</a>
+</article></div>
+  <p class="help"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg>Procurando um modelo específico? <a href="https://wa.me/551127912239" target="_blank" rel="noopener">Fale com um especialista pelo WhatsApp</a></p>
+  </div></div><div class="nt" data-n="C3"><b>Filtros à esquerda e grade de 4 colunas</b> com o mesmo card da home (preço à vista, parcelas, quantidade e Adicionar). Os filtros usam o que a Tray já tem (preço, marca, disponibilidade). No celular, viram o botão "Filtrar e ordenar". No fim da lista entra o atalho para o WhatsApp, como na Maria Pia.</div></section>
+<section class="wrap" data-note="C4"><div class="guide">
+  <h2>Como escolher equipamentos para o seu laboratório</h2>
+  <p>O equipamento certo depende do tipo de análise, do volume de amostras e de quem vai operar. Alguns pontos ajudam a decidir.</p>
+  <h3>O que considerar</h3>
+  <ul><li><b>Faixa e resolução de medição.</b> Um pHmetro de bolso atende campo e aulas; para controle de qualidade, prefira o de bancada com sonda de temperatura.</li>
+  <li><b>Alimentação.</b> Confira se o modelo é bivolt ou 220 V antes de comprar.</li>
+  <li><b>Calibração.</b> Balanças com calibração automática e pHmetros com calibração em vários pontos reduzem erro na rotina.</li>
+  <li><b>Itens inclusos.</b> Veja na página do produto o que acompanha: eletrodos, sondas, capas e manual em português.</li>
+  <li><b>Prazo de envio.</b> Cada produto mostra a disponibilidade; use o filtro de prazo quando precisar com urgência.</li></ul>
+  <h3>Precisa de ajuda?</h3>
+  <p>Nossa equipe orienta na escolha e faz orçamento para compras em volume pelo WhatsApp (11) 2791-2239 ou pelo e-mail vendas@inovelabor.com.br.</p>
+</div><div class="nt" data-n="C4"><b>Texto-guia no fim da categoria</b> (a Maria Pia faz isso em todas). Ajuda o Google a ranquear a categoria e responde dúvidas antes do atendimento. Na Tray: campo "descrição da categoria", posicionado abaixo da lista.</div></section>
+<section class="news" data-note="18"><div class="wrap">
+  <div><p class="eyebrow" style="color:var(--mint)">Newsletter InoveLabor</p><h3>Ofertas e lançamentos chegam <b>primeiro</b> aqui.</h3><p>Novidades do catálogo, campanhas como a InoveBlack e guias técnicos. Você pode sair da lista quando quiser.</p></div>
+  <form id="nl" novalidate><label class="sr" for="nl-name" hidden>Nome</label><input id="nl-name" placeholder="Seu nome" autocomplete="name"><label for="nl-mail" hidden>E-mail</label><input id="nl-mail" type="email" placeholder="Seu melhor e-mail" autocomplete="email"><button type="submit">Quero receber</button><p class="ok" id="nl-ok" hidden>Pronto, este é só um protótipo: na loja, o cadastro vai para a lista da Tray.</p></form>
+  </div>
+  <div class="nt" data-n="18"><b>Newsletter com uma promessa clara</b> ("chegam primeiro aqui"), e não só "cadastre-se". Na Tray: o formulário de newsletter já existe, só muda o texto e o visual.</div>
+</section>
+<footer data-note="19"><div class="wrap">
+  <div class="cols">
+    <div><img class="foot-logo" src="img/logo_neg.png" alt="InoveLabor"><p style="margin:0;color:#8EA19D">Produtos para laboratórios: vidrarias, equipamentos, plásticos, reagentes e consumíveis.</p></div>
+    <div><h4>Departamentos</h4><ul><li>Vidrarias</li><li>Equipamentos</li><li>Plásticos</li><li>Reagentes &amp; meios</li><li>Porcelanas</li></ul></div>
+    <div><h4>Institucional</h4><ul><li>Sobre a empresa</li><li>Como comprar</li><li>Política de privacidade</li><li>Envio e pagamento</li><li>Trocas e devoluções</li></ul></div>
+    <div><h4>Atendimento</h4><ul><li>(11) 2791-2239</li><li>vendas@inovelabor.com.br</li><li>Seg. a sex., 8h30 às 18h</li><li>Instagram @inovelabor</li></ul></div>
+  </div>
+  <div class="legal"><span>InoveLabor Produtos para Laboratórios. Todos os direitos reservados.</span><span>Protótipo de layout. Preços e produtos tirados da loja em 27/11.</span></div></div>
+  <div class="nt" data-n="19"><b>Rodapé escuro em colunas</b>, com departamentos, institucional, atendimento e Instagram, como o da Maria Pia. Na Tray: Editor de temas → rodapé.</div>
+</footer>
+
+<button class="notes-btn" id="nb" type="button" aria-pressed="false"><i></i><span id="nb-t">Ver notas de implementação</span></button>
+<a class="wa-float" href="https://wa.me/551127912239" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/></svg></a>
+
+<script>
+(function(){
+  // contagem regressiva até 01/12 23:59:59 (horário de Brasília)
+  var end = Date.parse('2026-12-01T23:59:59-03:00');
+  function pad(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var t = Math.max(0, end - Date.now()), s = Math.floor(t/1000);
+    document.getElementById('cd-d').textContent = pad(Math.floor(s/86400))+'d';
+    document.getElementById('cd-h').textContent = pad(Math.floor(s%86400/3600))+'h';
+    document.getElementById('cd-m').textContent = pad(Math.floor(s%3600/60))+'m';
+    document.getElementById('cd-s').textContent = pad(s%60)+'s';
+  }
+  tick(); setInterval(tick, 1000);
+  // quantidade
+  document.querySelectorAll('.qty').forEach(function(q){
+    var v = q.querySelector('span'), b = q.querySelectorAll('button');
+    b[0].addEventListener('click', function(){ v.textContent = Math.max(1, +v.textContent - 1) });
+    b[1].addEventListener('click', function(){ v.textContent = +v.textContent + 1 });
+  });
+  // abas
+  var tabs = document.querySelectorAll('[data-tab]');
+  tabs.forEach(function(t){ t.addEventListener('click', function(){
+    tabs.forEach(function(x){ x.setAttribute('aria-selected', x === t ? 'true' : 'false') });
+    document.querySelectorAll('[data-pane]').forEach(function(p){ p.hidden = p.dataset.pane !== t.dataset.tab });
+  })});
+  // notas
+  var nb = document.getElementById('nb');
+  function setNotes(on){ document.body.classList.toggle('show-notes', on); nb.setAttribute('aria-pressed', on); document.getElementById('nb-t').textContent = on ? 'Esconder notas' : 'Ver notas de implementação'; try{ localStorage.setItem('il-notes', on ? '1' : '0') }catch(e){} }
+  nb.addEventListener('click', function(){ setNotes(!document.body.classList.contains('show-notes')) });
+  try{ if(localStorage.getItem('il-notes') === '1') setNotes(true) }catch(e){}
+  // newsletter (protótipo)
+  document.getElementById('nl').addEventListener('submit', function(ev){ ev.preventDefault(); document.getElementById('nl-ok').hidden = false });
+})();
+
+  var fb=document.getElementById('fb'); if(fb){fb.addEventListener('click',function(){document.getElementById('filters').classList.toggle('open')})}
+  document.querySelectorAll('.ranges button').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true';document.querySelectorAll('.ranges button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed',on)})});
+
+</script>
+<nav class="pgnav" aria-label="Páginas do protótipo"><a href="index.html">Home</a><a href="categoria.html" aria-current="page">Categoria</a><a href="produto.html">Produto</a></nav></body></html>
